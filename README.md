@@ -5,6 +5,21 @@ Installe-la, branche ta manette, et retrouve tous tes jeux (Steam, Epic, GOG, Ub
 
 > NOVA est un logiciel indépendant. Il n'est ni affilié, ni approuvé par Sony, Microsoft, Valve ou les éditeurs des jeux cités.
 
+![L'accueil de NOVA](screenshots/01-accueil-neon.jpg)
+
+## 📸 Aperçu
+
+| | |
+|---|---|
+| ![Thème Vitrine](screenshots/02-accueil-vitrine.jpg) **Thème Vitrine** : le jeu en grand écran | ![Thème Rétro arcade](screenshots/03-accueil-retro.jpg) **Thème Rétro arcade** : menu façon borne d'arcade |
+| ![Thème Zen](screenshots/04-accueil-zen.jpg) **Thème Zen** : une grande jaquette au centre | ![Page du jeu](screenshots/05-page-du-jeu.jpg) **Page du jeu** : stats et dernières parties |
+| ![Bibliothèque](screenshots/06-bibliotheque.jpg) **Bibliothèque** : tous tes jeux, triés comme tu veux | ![Stats](screenshots/07-stats.jpg) **Stats** : temps de jeu, défis de la semaine, trophées |
+| ![Famille](screenshots/08-stats-famille.jpg) **Famille** : défis entre profils et fil de la famille | ![Paramètres](screenshots/09-parametres-apercu.jpg) **Paramètres** : chaque réglage est expliqué |
+
+<p align="center"><img src="screenshots/10-qui-joue.jpg" width="70%" alt="Qui joue ?"><br><em>Plusieurs profils, avec code PIN et contrôle parental</em></p>
+
+<sub>Captures réalisées avec une bibliothèque de démonstration (jeux fictifs).</sub>
+
 ## ✨ Ce que fait NOVA
 
 - **Tous tes jeux au même endroit** : détection automatique, jaquettes, fonds, logos et bandes-annonces récupérés tout seuls.

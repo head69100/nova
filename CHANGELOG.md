@@ -7,6 +7,10 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.53](https://github.com/head69100/nova/releases/tag/v1.4.53)
+- Messages chiffrés : NOVA vérifie désormais son propre appareil (signature croisée), pour qu'Element et les applis Matrix récentes lui envoient leurs clés
+- Nouvel écran Infos chiffrement dans les options d'une conversation
+
 ### [NOVA 1.4.52](https://github.com/head69100/nova/releases/tag/v1.4.52)
 - Messages chiffrés de bout en bout : NOVA lit et envoie les messages chiffrés (y compris avec Element et les autres applis Matrix)
 - Les nouvelles conversations et tables sont chiffrées dès le départ

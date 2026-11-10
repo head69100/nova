@@ -7,6 +7,12 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.47](https://github.com/head69100/nova/releases/tag/v1.4.47)
+- NOVA en ligne (phase 1) : nouvel onglet « En ligne » avec connexion à un compte Matrix gratuit sur la page officielle du serveur (NOVA ne voit jamais ton mot de passe)
+- Amis, demandes d'ami et statut en direct (en ligne, « Joue à… »)
+- Contrôle parental : en ligne autorisé ou non par profil, nouveaux amis validés par le code du parent
+- NOVA reste 100 % local tant qu'on ne se connecte pas
+
 ### [NOVA 1.4.46](https://github.com/head69100/nova/releases/tag/v1.4.46)
 - NOVA en anglais : toute l'interface est traduite, la langue se choisit dans l'installateur et se change dans Paramètres › Système › Langue
 - Installateur bilingue (français / anglais)

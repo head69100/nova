@@ -7,6 +7,9 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.65](https://github.com/head69100/nova/releases/tag/v1.4.65)
+- Paramètres : l'aperçu d'une section n'affiche plus de lignes « undefined »
+
 ### [NOVA 1.4.64](https://github.com/head69100/nova/releases/tag/v1.4.64)
 - En ligne : quand le serveur Matrix demande de patienter (trop de demandes), NOVA attend tout seul et réessaie, sinon il dit clairement combien de temps attendre
 - NOVA envoie moins de demandes en arrière-plan (statut rafraîchi moins souvent, une seule fois par ami)

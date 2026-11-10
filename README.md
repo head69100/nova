@@ -51,11 +51,11 @@ Retrouve tes amis **sans quitter ta console**, avec une interface pensée pour l
 <!-- NOUVEAUTES:DEBUT -->
 ## 🆕 Dernières nouveautés
 
+- **1.4.61** (10 novembre 2026) : Statut personnalisé : Dispo pour une partie, Ne pas déranger (coupe aussi les notifications en jeu), Absent ou un texte libre, visible sur ton étoile · Vocal dans les conversations et les lunes : son direct de PC à PC, plusieurs personnes, qui parle s'illumine, pastille En vocal partout dans NOVA, notification quand un ami t'appelle, raccourci manette pour couper le micro
 - **1.4.60** (10 novembre 2026) : Ajouter un ami devient simple : tape juste son pseudo, NOVA te montre le compte trouvé avant d'envoyer la demande · Nouveau lien d'ami à partager (Discord, SMS…) : un clic l'ouvre dans NOVA pour t'ajouter
 - **1.4.59** (10 novembre 2026) : Onglet en ligne : quand une discussion est ouverte, la vue du groupe ou de la constellation ne glisse plus sous la colonne Amis
 - **1.4.58** (10 novembre 2026) : Amis : si un ami quitte la conversation depuis une autre appli, il reste dans NOVA avec tout l'historique, et lui écrire le réinvite · Ajouter un ami parti le réinvite au lieu de dire qu'il est déjà ajouté · Une conversation relancée par un ami depuis une autre appli est acceptée d'office au lieu d'apparaître comme une demande d'ami
 - **1.4.57** (10 novembre 2026) : Groupes : les tables deviennent des lunes, et tous les membres accèdent d'office à toutes les lunes, même créées après leur arrivée · L'équipage du groupe (membres et leur statut) s'affiche, avec écrire ou ajouter en ami · Dans les nouveaux groupes, chaque membre peut créer une lune · Une lune au nom d'un jeu prend sa jaquette
-- **1.4.56** (10 novembre 2026) : Onglet en ligne : nouvelle colonne Amis avec la liste complète (en jeu, en ligne, hors ligne, demandes, groupes) et les boutons Ajouter un ami, Créer un groupe et Mon identifiant, qui ne chevauchent plus la constellation · Écran de diagnostic du chiffrement retiré
 
 ➡️ [Toutes les nouveautés, version par version](CHANGELOG.md)
 <!-- NOUVEAUTES:FIN -->

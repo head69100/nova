@@ -7,6 +7,9 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.54](https://github.com/head69100/nova/releases/tag/v1.4.54)
+- Onglet en ligne : la zone d'écriture, les boutons et les messages ne se chevauchent plus quand ils sont sélectionnés
+
 ### [NOVA 1.4.53](https://github.com/head69100/nova/releases/tag/v1.4.53)
 - Messages chiffrés : NOVA vérifie désormais son propre appareil (signature croisée), pour qu'Element et les applis Matrix récentes lui envoient leurs clés
 - Nouvel écran Infos chiffrement dans les options d'une conversation

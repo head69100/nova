@@ -31,11 +31,11 @@ Installe-la, branche ta manette, et retrouve tous tes jeux (Steam, Epic, GOG, Ub
 <!-- NOUVEAUTES:DEBUT -->
 ## 🆕 Dernières nouveautés
 
+- **1.4.54** (10 novembre 2026) : Onglet en ligne : la zone d'écriture, les boutons et les messages ne se chevauchent plus quand ils sont sélectionnés
 - **1.4.53** (10 novembre 2026) : Messages chiffrés : NOVA vérifie désormais son propre appareil (signature croisée), pour qu'Element et les applis Matrix récentes lui envoient leurs clés · Nouvel écran Infos chiffrement dans les options d'une conversation
 - **1.4.52** (10 novembre 2026) : Messages chiffrés de bout en bout : NOVA lit et envoie les messages chiffrés (y compris avec Element et les autres applis Matrix) · Les nouvelles conversations et tables sont chiffrées dès le départ · Images chiffrées elles aussi
 - **1.4.51** (10 novembre 2026) : En ligne beaucoup plus rapide : la constellation et les conversations s'ouvrent instantanément · Les messages chiffrés envoyés depuis une autre appli Matrix s'affichent (avec une explication) au lieu de disparaître
 - **1.4.50** (10 novembre 2026) : Nouvelle interface en ligne « Constellation » : tes amis en étoiles autour de toi, tes groupes en planètes · Tables de jeu avec jaquettes, qui y joue et parties proposées avec réponses · Roue des messages à la manette, aussi en plein jeu (PS + pavé tactile) · Onglet en ligne et conversations bien plus rapides
-- **1.4.49** (10 novembre 2026) : Discord NOVA : messages privés avec tes amis, réactions, réponses, emojis et envoi de captures · Serveurs façon Discord : crée ton serveur avec ses salons (#général, #jeux…), invite tes amis, qui rejoignent tous les salons automatiquement · Notifications de messages par-dessus le jeu et dans NOVA, avec pastilles de messages non lus · À la manette : réponses rapides (Triangle), emojis (Options), réactions (Carré) et clavier à l'écran
 
 ➡️ [Toutes les nouveautés, version par version](CHANGELOG.md)
 <!-- NOUVEAUTES:FIN -->

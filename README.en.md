@@ -6,7 +6,7 @@ NOVA is a full-screen interface to launch your PC games **with a controller**, j
 Install it, plug in your controller, and find all your games (Steam, Epic, GOG, Ubisoft, EA and your own game folders) in one place.
 
 > NOVA is independent software. It is not affiliated with or endorsed by Sony, Microsoft, Valve or the publishers of the games shown.
-> The interface is currently in **French** (an English version is planned).
+> The interface is available in **English and French**: pick your language in the installer (you can change it later in Settings › System › Language).
 
 <p align="center"><img src="screenshots/nova-demo.gif" alt="NOVA demo: controller navigation through the home screen, a game page, the library and stats" width="100%"></p>
 
@@ -55,7 +55,7 @@ Install it, plug in your controller, and find all your games (Steam, Epic, GOG, 
 ## 🔄 Updates
 
 NOVA checks for new releases published here and offers to install them
-(Paramètres › Système › Mises à jour et historique). Release notes are written in French: see the [changelog](CHANGELOG.md).
+(Settings › System › Updates and history). Release notes are written in French: see the [changelog](CHANGELOG.md).
 
 ## ❤️ Support NOVA
 

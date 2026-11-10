@@ -9,6 +9,8 @@ NOVA utilise ou s'appuie sur les composants suivants. Merci à leurs auteurs.
 | [ViGEm Client (.NET)](https://github.com/nefarius/ViGEm.NET) | Manette Xbox virtuelle | MIT |
 | Musiques d'ambiance — *Ambient Soft* (AvelineMusic), *Rolfied* (leberch) | Musique des menus | [Licence de contenu Pixabay](https://pixabay.com/fr/service/license-summary/) |
 | Sons — *Chill Logo Design*, *Simple Clean Logo* | Démarrage et fermeture | [Licence de contenu Pixabay](https://pixabay.com/fr/service/license-summary/) |
+| [LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor) (bibliothèque et dépendances, non modifiées) | Température du processeur (option) | MPL-2.0 — code source sur le dépôt officiel |
+| [PawnIO](https://github.com/namazso/PawnIO) (installateur officiel signé, non modifié) | Pilote d'accès aux capteurs (option) | GPL-2.0 — code source sur le [dépôt officiel](https://github.com/namazso/PawnIO) |
 
 ## Téléchargés depuis leur site officiel, à la demande de l'utilisateur (non inclus dans NOVA)
 | Composant | Utilisation | Licence |

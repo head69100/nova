@@ -51,11 +51,11 @@ Retrouve tes amis **sans quitter ta console**, avec une interface pensée pour l
 <!-- NOUVEAUTES:DEBUT -->
 ## 🆕 Dernières nouveautés
 
+- **1.4.65** (10 novembre 2026) : Paramètres : l'aperçu d'une section n'affiche plus de lignes « undefined »
 - **1.4.64** (10 novembre 2026) : En ligne : quand le serveur Matrix demande de patienter (trop de demandes), NOVA attend tout seul et réessaie, sinon il dit clairement combien de temps attendre · NOVA envoie moins de demandes en arrière-plan (statut rafraîchi moins souvent, une seule fois par ami)
 - **1.4.63** (10 novembre 2026) : Appels compatibles Element : quand un ami t'appelle depuis Element, NOVA sonne (même en jeu, sauf en Ne pas déranger) et tu décroches ou refuses à la manette · Tu peux aussi appeler depuis NOVA un ami qui utilise Element · Pastille d'appel avec la durée, micro et raccrocher
 - **1.4.62** (10 novembre 2026) : Paramètres réorganisés : chaque onglet est rangé par thème avec des intertitres et une icône par réglage, et les sous-réglages n'apparaissent que si leur option est activée · Onglet en ligne : de vraies icônes à la place des émojis (statuts, créateur du groupe, réponses aux parties proposées, chiffrement) · NOVA Vision retiré
 - **1.4.61** (10 novembre 2026) : Statut personnalisé : Dispo pour une partie, Ne pas déranger (coupe aussi les notifications en jeu), Absent ou un texte libre, visible sur ton étoile · Vocal dans les conversations et les lunes : son direct de PC à PC, plusieurs personnes, qui parle s'illumine, pastille En vocal partout dans NOVA, notification quand un ami t'appelle, raccourci manette pour couper le micro
-- **1.4.60** (10 novembre 2026) : Ajouter un ami devient simple : tape juste son pseudo, NOVA te montre le compte trouvé avant d'envoyer la demande · Nouveau lien d'ami à partager (Discord, SMS…) : un clic l'ouvre dans NOVA pour t'ajouter
 
 ➡️ [Toutes les nouveautés, version par version](CHANGELOG.md)
 <!-- NOUVEAUTES:FIN -->

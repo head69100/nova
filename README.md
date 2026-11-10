@@ -31,11 +31,11 @@ Installe-la, branche ta manette, et retrouve tous tes jeux (Steam, Epic, GOG, Ub
 <!-- NOUVEAUTES:DEBUT -->
 ## 🆕 Dernières nouveautés
 
+- **1.4.49** (10 novembre 2026) : Discord NOVA : messages privés avec tes amis, réactions, réponses, emojis et envoi de captures · Serveurs façon Discord : crée ton serveur avec ses salons (#général, #jeux…), invite tes amis, qui rejoignent tous les salons automatiquement · Notifications de messages par-dessus le jeu et dans NOVA, avec pastilles de messages non lus · À la manette : réponses rapides (Triangle), emojis (Options), réactions (Carré) et clavier à l'écran
 - **1.4.48** (10 novembre 2026) : En ligne : un ami qui utilise une autre appli Matrix (Element…) est affiché « Utilise une autre appli Matrix » au lieu de « Hors ligne »
 - **1.4.47** (10 novembre 2026) : NOVA en ligne (phase 1) : nouvel onglet « En ligne » avec connexion à un compte Matrix gratuit sur la page officielle du serveur (NOVA ne voit jamais ton mot de passe) · Amis, demandes d'ami et statut en direct (en ligne, « Joue à… ») · Contrôle parental : en ligne autorisé ou non par profil, nouveaux amis validés par le code du parent · NOVA reste 100 % local tant qu'on ne se connecte pas
 - **1.4.46** (10 novembre 2026) : NOVA en anglais : toute l'interface est traduite, la langue se choisit dans l'installateur et se change dans Paramètres › Système › Langue · Installateur bilingue (français / anglais)
 - **1.4.45** (10 novembre 2026) : Correction : plus de message d'erreur à la fermeture de NOVA quand une manette sur téléphone était connectée
-- **1.4.44** (10 novembre 2026) : Paramètres réorganisés en onglets clairs : Profils, Jeux, En jeu, Apparence, Son, Manette, Famille, Télé & réseau, Système · Sauvegardes dans le cloud : copie après chaque partie dans OneDrive, Google Drive, Dropbox ou sur une clé USB, sans compte à connecter dans NOVA · Téléphone en second écran (QR code) : partie, températures, capture, pause, son · Inviter un ami par QR code : son téléphone devient une manette · Mods en un clic, profil par profil · Réseau maison : les autres PC NOVA, jeux en commun et invitations · NOVA Vision : un indice par une IA locale et gratuite (Ollama), Ctrl + Alt + V
 
 ➡️ [Toutes les nouveautés, version par version](CHANGELOG.md)
 <!-- NOUVEAUTES:FIN -->

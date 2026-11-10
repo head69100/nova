@@ -5,6 +5,8 @@
 NOVA est une interface plein écran pour lancer tes jeux PC **à la manette**, comme sur une console de salon.
 Installe-la, branche ta manette, et retrouve tous tes jeux (Steam, Epic, GOG, Ubisoft, EA et tes dossiers de jeux) dans une seule interface.
 
+> Interface en **français ou en anglais** : la langue se choisit dans l'installateur (et se change dans Paramètres › Système › Langue).
+>
 > NOVA est un logiciel indépendant. Il n'est ni affilié, ni approuvé par Sony, Microsoft, Valve ou les éditeurs des jeux cités.
 
 <p align="center"><img src="screenshots/nova-demo.gif" alt="Démonstration de NOVA : navigation à la manette dans l'accueil, la page d'un jeu, la bibliothèque et les statistiques" width="100%"></p>
@@ -29,11 +31,11 @@ Installe-la, branche ta manette, et retrouve tous tes jeux (Steam, Epic, GOG, Ub
 <!-- NOUVEAUTES:DEBUT -->
 ## 🆕 Dernières nouveautés
 
+- **1.4.46** (10 novembre 2026) : NOVA en anglais : toute l'interface est traduite, la langue se choisit dans l'installateur et se change dans Paramètres › Système › Langue · Installateur bilingue (français / anglais)
 - **1.4.45** (10 novembre 2026) : Correction : plus de message d'erreur à la fermeture de NOVA quand une manette sur téléphone était connectée
 - **1.4.44** (10 novembre 2026) : Paramètres réorganisés en onglets clairs : Profils, Jeux, En jeu, Apparence, Son, Manette, Famille, Télé & réseau, Système · Sauvegardes dans le cloud : copie après chaque partie dans OneDrive, Google Drive, Dropbox ou sur une clé USB, sans compte à connecter dans NOVA · Téléphone en second écran (QR code) : partie, températures, capture, pause, son · Inviter un ami par QR code : son téléphone devient une manette · Mods en un clic, profil par profil · Réseau maison : les autres PC NOVA, jeux en commun et invitations · NOVA Vision : un indice par une IA locale et gratuite (Ollama), Ctrl + Alt + V
 - **1.4.43** (10 novembre 2026) : Jaquettes des jeux Epic Games : images officielles du launcher Epic (même pour les jeux absents de Steam) · Les jaquettes manquantes sont recherchées automatiquement, ou à la demande dans Paramètres › Système › Avancé
 - **1.4.42** (10 novembre 2026) : Mode nuit : écran plus doux et musique plus basse le soir, petit rappel aux enfants qui jouent tard · Salon à deux : une deuxième manette = un deuxième profil, temps de jeu et trophées pour chacun · Jeux à deux sur le canapé : filtre dans la Bibliothèque · Mode « Maman arrive » (Ctrl + Alt + H) : le jeu se fige, le son se coupe et l'écran se cache · Écran PC ↔ Télé pendant une partie, sans la quitter (PS + Triangle ou Ctrl + Alt + T)
-- **1.4.41** (10 novembre 2026) : Jeux Epic Games détectés avec la nouvelle version du launcher Epic (ils s'ajoutent tout seuls, avec leur vrai nom)
 
 ➡️ [Toutes les nouveautés, version par version](CHANGELOG.md)
 <!-- NOUVEAUTES:FIN -->

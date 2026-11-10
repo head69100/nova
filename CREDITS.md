@@ -11,6 +11,7 @@ NOVA utilise ou s'appuie sur les composants suivants. Merci à leurs auteurs.
 | Sons — *Chill Logo Design*, *Simple Clean Logo* | Démarrage et fermeture | [Licence de contenu Pixabay](https://pixabay.com/fr/service/license-summary/) |
 | [LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor) (bibliothèque et dépendances, non modifiées) | Température du processeur (option) | MPL-2.0 — code source sur le dépôt officiel |
 | [PawnIO](https://github.com/namazso/PawnIO) (installateur officiel signé, non modifié) | Pilote d'accès aux capteurs (option) | GPL-2.0 — code source sur le [dépôt officiel](https://github.com/namazso/PawnIO) |
+| [matrix-sdk-crypto (Node.js)](https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs) (bibliothèque officielle Matrix, non modifiée) | Chiffrement de bout en bout des messages | Apache-2.0 |
 
 ## Téléchargés depuis leur site officiel, à la demande de l'utilisateur (non inclus dans NOVA)
 | Composant | Utilisation | Licence |

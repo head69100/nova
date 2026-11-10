@@ -23,11 +23,11 @@ Installe-la, branche ta manette, et retrouve tous tes jeux (Steam, Epic, GOG, Ub
 <!-- NOUVEAUTES:DEBUT -->
 ## 🆕 Dernières nouveautés
 
+- **1.4.39** (10 novembre 2026) : Température du processeur dans les infos en jeu (PS + L1 ou Ctrl + Alt + I), à côté de celle de la carte graphique · Option à activer dans Paramètres › Système : NOVA installe une fois le service « NOVA Capteurs » (LibreHardwareMonitor + pilote PawnIO) avec ta confirmation Windows
 - **1.4.38** (10 novembre 2026) : Raccourcis clavier pour jouer sans manette (Ctrl + Alt + N, S, R, I, P, T, C, M), actifs même en jeu et modifiables
 - **1.4.37** (10 novembre 2026) : Infos en jeu (PS + L1) : température de la carte graphique, en couleur selon la chaleur
 - **1.4.36** (10 novembre 2026) : Mise à jour annoncée par une petite notification en haut à droite (plus de grand écran) · NOVA se met à jour depuis GitHub
 - **1.4.35** (9 novembre 2026) : Le contenu qui défile s'estompe sous la barre d'onglets (plus de texte mélangé aux onglets)
-- **1.4.34** (9 novembre 2026) : Thème Zen corrigé : la jaquette centrale ne déborde plus, le texte et les stats tiennent à l'écran (tous formats, télé et PC)
 
 ➡️ [Toutes les nouveautés, version par version](CHANGELOG.md)
 <!-- NOUVEAUTES:FIN -->

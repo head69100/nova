@@ -7,6 +7,9 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.41](https://github.com/head69100/nova/releases/tag/v1.4.41)
+- Jeux Epic Games détectés avec la nouvelle version du launcher Epic (ils s'ajoutent tout seuls, avec leur vrai nom)
+
 ### [NOVA 1.4.40](https://github.com/head69100/nova/releases/tag/v1.4.40)
 - Température du processeur : la fenêtre de confirmation de Windows s'affiche maintenant devant NOVA en plein écran
 - Tuile « Continuer » en tête de l'accueil sur ton dernier jeu

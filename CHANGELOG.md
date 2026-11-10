@@ -7,6 +7,13 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.42](https://github.com/head69100/nova/releases/tag/v1.4.42)
+- Mode nuit : écran plus doux et musique plus basse le soir, petit rappel aux enfants qui jouent tard
+- Salon à deux : une deuxième manette = un deuxième profil, temps de jeu et trophées pour chacun
+- Jeux à deux sur le canapé : filtre dans la Bibliothèque
+- Mode « Maman arrive » (Ctrl + Alt + H) : le jeu se fige, le son se coupe et l'écran se cache
+- Écran PC ↔ Télé pendant une partie, sans la quitter (PS + Triangle ou Ctrl + Alt + T)
+
 ### [NOVA 1.4.41](https://github.com/head69100/nova/releases/tag/v1.4.41)
 - Jeux Epic Games détectés avec la nouvelle version du launcher Epic (ils s'ajoutent tout seuls, avec leur vrai nom)
 

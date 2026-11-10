@@ -7,6 +7,12 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.57](https://github.com/head69100/nova/releases/tag/v1.4.57)
+- Groupes : les tables deviennent des lunes, et tous les membres accèdent d'office à toutes les lunes, même créées après leur arrivée
+- L'équipage du groupe (membres et leur statut) s'affiche, avec écrire ou ajouter en ami
+- Dans les nouveaux groupes, chaque membre peut créer une lune
+- Une lune au nom d'un jeu prend sa jaquette
+
 ### [NOVA 1.4.56](https://github.com/head69100/nova/releases/tag/v1.4.56)
 - Onglet en ligne : nouvelle colonne Amis avec la liste complète (en jeu, en ligne, hors ligne, demandes, groupes) et les boutons Ajouter un ami, Créer un groupe et Mon identifiant, qui ne chevauchent plus la constellation
 - Écran de diagnostic du chiffrement retiré

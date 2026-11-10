@@ -7,6 +7,10 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.43](https://github.com/head69100/nova/releases/tag/v1.4.43)
+- Jaquettes des jeux Epic Games : images officielles du launcher Epic (même pour les jeux absents de Steam)
+- Les jaquettes manquantes sont recherchées automatiquement, ou à la demande dans Paramètres › Système › Avancé
+
 ### [NOVA 1.4.42](https://github.com/head69100/nova/releases/tag/v1.4.42)
 - Mode nuit : écran plus doux et musique plus basse le soir, petit rappel aux enfants qui jouent tard
 - Salon à deux : une deuxième manette = un deuxième profil, temps de jeu et trophées pour chacun

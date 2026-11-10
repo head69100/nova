@@ -7,6 +7,10 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.51](https://github.com/head69100/nova/releases/tag/v1.4.51)
+- En ligne beaucoup plus rapide : la constellation et les conversations s'ouvrent instantanément
+- Les messages chiffrés envoyés depuis une autre appli Matrix s'affichent (avec une explication) au lieu de disparaître
+
 ### [NOVA 1.4.50](https://github.com/head69100/nova/releases/tag/v1.4.50)
 - Nouvelle interface en ligne « Constellation » : tes amis en étoiles autour de toi, tes groupes en planètes
 - Tables de jeu avec jaquettes, qui y joue et parties proposées avec réponses

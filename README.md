@@ -1,9 +1,15 @@
 # NOVA — ton PC devient une console
 
+**Français** · [English](README.en.md) · 🌐 [Site de NOVA](https://head69100.github.io/nova/)
+
 NOVA est une interface plein écran pour lancer tes jeux PC **à la manette**, comme sur une console de salon.
 Installe-la, branche ta manette, et retrouve tous tes jeux (Steam, Epic, GOG, Ubisoft, EA et tes dossiers de jeux) dans une seule interface.
 
 > NOVA est un logiciel indépendant. Il n'est ni affilié, ni approuvé par Sony, Microsoft, Valve ou les éditeurs des jeux cités.
+
+<p align="center"><img src="screenshots/nova-demo.gif" alt="Démonstration de NOVA : navigation à la manette dans l'accueil, la page d'un jeu, la bibliothèque et les statistiques" width="100%"></p>
+
+<p align="center"><a href="https://github.com/head69100/nova/releases/latest"><b>⬇️ Télécharger NOVA (gratuit)</b></a></p>
 
 ![L'accueil de NOVA](screenshots/01-accueil-neon.jpg)
 
@@ -38,9 +44,13 @@ Installe-la, branche ta manette, et retrouve tous tes jeux (Steam, Epic, GOG, Ub
 - **Pensée pour la manette** : DualSense, DualShock 4 et manettes Xbox. Batterie affichée, vibrations, barre lumineuse aux couleurs du jeu.
 - **Manette Xbox virtuelle** pour les jeux qui ne reconnaissent pas la DualSense.
 - **Profils** avec code PIN, avatars, contrôle parental, sauvegardes séparées par profil et profil invité.
-- **Jouer sur la télé** (avec Sunshine et Moonlight) : un raccourci manette allume la télé et y affiche NOVA.
+- **Jouer sur la télé** (avec Sunshine et Moonlight) : un raccourci manette allume la télé et y affiche NOVA, et en pleine partie tu passes de l'écran du PC à la télé sans quitter le jeu.
+- **Famille** : mode nuit, joueur 2 compté quand deux manettes jouent, jeux à deux sur le canapé.
+- **Ton téléphone** (QR code) : second écran pendant la partie, ou manette pour un ami, sans rien installer.
+- **NOVA Vision** : bloqué ? une IA installée sur ton PC (gratuite, sans compte) te donne un indice à partir d'une capture.
+- **Sauvegardes dans le cloud** (OneDrive, Google Drive, Dropbox ou clé USB) et **mods par profil**.
 - **Stats, trophées, défis de la semaine, récap du mois et carnet de bord** de tes parties.
-- **Raccourcis manette** (PS + bouton) : capture, replay des 30 dernières secondes, infos en jeu, pause du jeu…
+- **Raccourcis manette et clavier** : capture, replay des 30 dernières secondes, infos en jeu et températures, pause du jeu…
 - **Thèmes** qui changent toute la disposition : Néon, Vitrine, Rétro arcade, Zen.
 - **Mises à jour intégrées** : NOVA te prévient et se met à jour sans réinstallation.
 
@@ -62,6 +72,9 @@ NOVA vérifie lui-même les nouvelles versions publiées ici et te propose de le
 
 NOVA est gratuit. Si tu veux que je continue à l'améliorer et à le maintenir à jour,
 tu peux me soutenir avec le bouton **Sponsor** en haut de cette page. Merci !
+
+Ça t'aide de ne rien rater ? Clique sur ⭐ **Star** et 👁 **Watch** en haut de la page : ça fait connaître NOVA et tu es prévenu à chaque nouvelle version.
+Une question, une idée ? Passe dans les [Discussions](https://github.com/head69100/nova/discussions).
 
 ## ⚖️ Licence
 

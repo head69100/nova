@@ -31,11 +31,11 @@ Installe-la, branche ta manette, et retrouve tous tes jeux (Steam, Epic, GOG, Ub
 <!-- NOUVEAUTES:DEBUT -->
 ## 🆕 Dernières nouveautés
 
+- **1.4.52** (10 novembre 2026) : Messages chiffrés de bout en bout : NOVA lit et envoie les messages chiffrés (y compris avec Element et les autres applis Matrix) · Les nouvelles conversations et tables sont chiffrées dès le départ · Images chiffrées elles aussi
 - **1.4.51** (10 novembre 2026) : En ligne beaucoup plus rapide : la constellation et les conversations s'ouvrent instantanément · Les messages chiffrés envoyés depuis une autre appli Matrix s'affichent (avec une explication) au lieu de disparaître
 - **1.4.50** (10 novembre 2026) : Nouvelle interface en ligne « Constellation » : tes amis en étoiles autour de toi, tes groupes en planètes · Tables de jeu avec jaquettes, qui y joue et parties proposées avec réponses · Roue des messages à la manette, aussi en plein jeu (PS + pavé tactile) · Onglet en ligne et conversations bien plus rapides
 - **1.4.49** (10 novembre 2026) : Discord NOVA : messages privés avec tes amis, réactions, réponses, emojis et envoi de captures · Serveurs façon Discord : crée ton serveur avec ses salons (#général, #jeux…), invite tes amis, qui rejoignent tous les salons automatiquement · Notifications de messages par-dessus le jeu et dans NOVA, avec pastilles de messages non lus · À la manette : réponses rapides (Triangle), emojis (Options), réactions (Carré) et clavier à l'écran
 - **1.4.48** (10 novembre 2026) : En ligne : un ami qui utilise une autre appli Matrix (Element…) est affiché « Utilise une autre appli Matrix » au lieu de « Hors ligne »
-- **1.4.47** (10 novembre 2026) : NOVA en ligne (phase 1) : nouvel onglet « En ligne » avec connexion à un compte Matrix gratuit sur la page officielle du serveur (NOVA ne voit jamais ton mot de passe) · Amis, demandes d'ami et statut en direct (en ligne, « Joue à… ») · Contrôle parental : en ligne autorisé ou non par profil, nouveaux amis validés par le code du parent · NOVA reste 100 % local tant qu'on ne se connecte pas
 
 ➡️ [Toutes les nouveautés, version par version](CHANGELOG.md)
 <!-- NOUVEAUTES:FIN -->

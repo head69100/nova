@@ -3,124 +3,318 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projet Nova</title>
+  <title>NOVA — Ton PC devient une console</title>
+  <!-- Polices Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <style>
+    :root {
+      --bg-dark: #0b0c10;
+      --card-bg: rgba(26, 27, 38, 0.7);
+      --accent-purple: #7952b3;
+      --accent-cyan: #00d2ff;
+      --accent-pink: #ff2a74;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     body {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(121, 82, 179, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(0, 210, 255, 0.15) 0%, transparent 40%);
+      color: var(--text-main);
+      font-family: 'Rajdhani', sans-serif;
       min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      background: linear-gradient(135deg, #a855f7, #3b82f6, #00d2ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      color: var(--accent-cyan);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem 1.5rem;
+    }
+
+    .badge-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .badge strong {
+      color: #fff;
+    }
+
+    /* Section Aperçu / Showcase */
+    .showcase {
+      background: var(--card-bg);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      margin-bottom: 3rem;
+    }
+
+    .main-img-container img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-cyan);
+    }
+
+    /* Grid des Fonctionnalités */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 1.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(168, 85, 247, 0.5);
+    }
+
+    .feature-card i {
+      font-size: 2rem;
+      color: var(--accent-cyan);
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Section Sponsor & Actions */
+    .action-section {
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
       justify-content: center;
-      padding: 20px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 20px;
-      padding: 40px;
-      max-width: 600px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 15px;
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .dynamic-text {
-      font-size: 1.3rem;
-      color: #00c6ff;
-      height: 30px;
-      margin-bottom: 25px;
-    }
-
-    p {
-      color: #cfd8dc;
-      line-height: 1.6;
-      margin-bottom: 30px;
     }
 
     .btn {
-      display: inline-block;
-      padding: 12px 30px;
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
-      color: white;
-      text-decoration: none;
+      padding: 12px 28px;
       border-radius: 30px;
-      font-weight: bold;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 198, 255, 0.4);
+    .btn-primary {
+      background: linear-gradient(90deg, #a855f7, #3b82f6);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .btn-primary:hover {
+      box-shadow: 0 6px 25px rgba(168, 85, 247, 0.7);
+      transform: translateY(-2px);
+    }
+
+    .btn-sponsor {
+      background: linear-gradient(90deg, #ff2a74, #ea4c89);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(255, 42, 116, 0.4);
+    }
+
+    .btn-sponsor:hover {
+      box-shadow: 0 6px 25px rgba(255, 42, 116, 0.7);
+      transform: translateY(-2px);
+    }
+
+    .sponsor-box {
+      background: rgba(255, 42, 116, 0.08);
+      border: 1px solid rgba(255, 42, 116, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .sponsor-box h3 {
+      color: var(--accent-pink);
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <h1>🚀 Projet Nova</h1>
-    <div class="dynamic-text" id="typewriter"></div>
-    <p>
-      Bienvenue sur la page officielle du projet Nova. Cet espace regroupe toutes les informations, 
-      mises à jour et fonctionnalités de mon application.
-    </p>
-    <a href="https://github.com/head69100/nova" class="btn" target="_blank">Voir sur GitHub</a>
+  <header>
+    <h1 class="title">NOVA</h1>
+    <p class="tagline">Ton PC devient une console</p>
+    
+    <div class="badge-container">
+      <span class="badge">Version: <strong>1.4.44</strong></span>
+      <span class="badge">Licence: <strong>MIT / Open Source</strong></span>
+      <span class="badge">Support: <strong>Manettes PC</strong></span>
+    </div>
+  </header>
+
+  <div class="container">
+    
+    <!-- Présentation Visuelle -->
+    <div class="showcase">
+      <div class="main-img-container">
+        <img src="https://raw.githubusercontent.com/head69100/nova/main/screenshots/preview1.png" alt="Aperçu NOVA Interface" onerror="this.src='https://raw.githubusercontent.com/head69100/nova/main/screenshots/1.png'">
+      </div>
+      
+      <div class="gallery">
+        <img src="https://raw.githubusercontent.com/head69100/nova/main/screenshots/preview2.png" alt="Aperçu Jeu NOVA" onerror="this.src='https://raw.githubusercontent.com/head69100/nova/main/screenshots/2.png'">
+        <img src="https://raw.githubusercontent.com/head69100/nova/main/screenshots/preview3.png" alt="Aperçu Paramètres NOVA" onerror="this.src='https://raw.githubusercontent.com/head69100/nova/main/screenshots/3.png'">
+      </div>
+    </div>
+
+    <!-- Fonctionnalités -->
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fa-solid fa-gamepad"></i>
+        <h3>100% Manette</h3>
+        <p>Interface optimisée pour être naviguée entièrement à la manette, directement depuis votre canapé.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-layer-group"></i>
+        <h3>Multi-Plateformes</h3>
+        <p>Regroupe vos jeux Steam, Epic Games, GOG, Ubisoft, EA et vos dossiers personnalisés au même endroit.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-bolt"></i>
+        <h3>Interface Plein Écran</h3>
+        <p>Une expérience fluide, moderne et rapide sans les distractions de votre bureau Windows.</p>
+      </div>
+    </div>
+
+    <!-- Liens d'action et Sponsor -->
+    <div class="action-section">
+      <div class="btn-group">
+        <a href="https://github.com/head69100/nova/releases" class="btn btn-primary" target="_blank">
+          <i class="fa-solid fa-download"></i> Télécharger la V1.4.44
+        </a>
+        <a href="https://github.com/head69100/nova" class="btn btn-primary" style="background: rgba(255,255,255,0.1);" target="_blank">
+          <i class="fa-fab fa-github"></i> Voir le code
+        </a>
+      </div>
+
+      <div class="sponsor-box">
+        <h3><i class="fa-solid fa-heart"></i> Soutenir le projet</h3>
+        <p style="margin-bottom: 1rem; color: var(--text-main);">
+          NOVA est un projet indépendant et open-source. Vous souhaitez encourager le développement ?
+        </p>
+        <a href="https://github.com/sponsors/head69100" class="btn btn-sponsor" target="_blank">
+          <i class="fa-solid fa-heart"></i> Sponsoriser NOVA
+        </a>
+      </div>
+    </div>
+
   </div>
 
-  <script>
-    // Effet texte dynamique (Typewriter)
-    const words = ["Bienvenue !", "Découvrez le Projet Nova", "Créatif & Innovant"];
-    let i = 0, j = 0, isDeleting = false;
+  <footer>
+    <p>NOVA est un logiciel indépendant. Il n'est ni affilié, ni approuvé par Sony, Microsoft, Valve ou les éditeurs cités.</p>
+  </footer>
 
-    function type() {
-      const currentWord = words[i];
-      const target = document.getElementById("typewriter");
-
-      if (isDeleting) {
-        target.textContent = currentWord.substring(0, j - 1);
-        j--;
-      } else {
-        target.textContent = currentWord.substring(0, j + 1);
-        j++;
-      }
-
-      if (!isDeleting && j === currentWord.length) {
-        isDeleting = true;
-        setTimeout(type, 2000);
-      } else if (isDeleting && j === 0) {
-        isDeleting = false;
-        i = (i + 1) % words.length;
-        setTimeout(type, 500);
-      } else {
-        setTimeout(type, isDeleting ? 50 : 100);
-      }
-    }
-
-    type();
-  </script>
 </body>
 </html>

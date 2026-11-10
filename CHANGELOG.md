@@ -7,6 +7,11 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.62](https://github.com/head69100/nova/releases/tag/v1.4.62)
+- Paramètres réorganisés : chaque onglet est rangé par thème avec des intertitres et une icône par réglage, et les sous-réglages n'apparaissent que si leur option est activée
+- Onglet en ligne : de vraies icônes à la place des émojis (statuts, créateur du groupe, réponses aux parties proposées, chiffrement)
+- NOVA Vision retiré
+
 ### [NOVA 1.4.61](https://github.com/head69100/nova/releases/tag/v1.4.61)
 - Statut personnalisé : Dispo pour une partie, Ne pas déranger (coupe aussi les notifications en jeu), Absent ou un texte libre, visible sur ton étoile
 - Vocal dans les conversations et les lunes : son direct de PC à PC, plusieurs personnes, qui parle s'illumine, pastille En vocal partout dans NOVA, notification quand un ami t'appelle, raccourci manette pour couper le micro

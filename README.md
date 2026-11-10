@@ -34,6 +34,7 @@ Retrouve tes amis **sans quitter ta console**, avec une interface pensée pour l
 
 ![Ta constellation : tes amis en étoiles autour de toi, tes groupes en planètes](screenshots/11-en-ligne-constellation.jpg)
 
+- **Ajouter un ami, simplement** : tape juste son pseudo (NOVA te montre le compte trouvé avant d'envoyer), ou envoie ton **lien d'ami** : en un clic, il s'ouvre dans NOVA et ton ami t'ajoute.
 - **Ta constellation** : tes amis sont des étoiles autour de toi. Ceux qui jouent brillent aux couleurs de leur jeu, et tes groupes sont des planètes. La colonne **Amis** donne la liste complète, triée par statut.
 - **Groupes et lunes** : chaque groupe a ses **lunes**, une par jeu ou par sujet, avec la jaquette du jeu en décor et les amis qui y jouent. L'**équipage** (les membres) s'affiche, et chaque membre accède à toutes les lunes.
 - **« Ce soir 21 h ? »** : propose une partie, tes amis répondent « Je viens » ou « Pas dispo » directement sur la carte.
@@ -50,11 +51,11 @@ Retrouve tes amis **sans quitter ta console**, avec une interface pensée pour l
 <!-- NOUVEAUTES:DEBUT -->
 ## 🆕 Dernières nouveautés
 
+- **1.4.60** (10 novembre 2026) : Ajouter un ami devient simple : tape juste son pseudo, NOVA te montre le compte trouvé avant d'envoyer la demande · Nouveau lien d'ami à partager (Discord, SMS…) : un clic l'ouvre dans NOVA pour t'ajouter
 - **1.4.59** (10 novembre 2026) : Onglet en ligne : quand une discussion est ouverte, la vue du groupe ou de la constellation ne glisse plus sous la colonne Amis
 - **1.4.58** (10 novembre 2026) : Amis : si un ami quitte la conversation depuis une autre appli, il reste dans NOVA avec tout l'historique, et lui écrire le réinvite · Ajouter un ami parti le réinvite au lieu de dire qu'il est déjà ajouté · Une conversation relancée par un ami depuis une autre appli est acceptée d'office au lieu d'apparaître comme une demande d'ami
 - **1.4.57** (10 novembre 2026) : Groupes : les tables deviennent des lunes, et tous les membres accèdent d'office à toutes les lunes, même créées après leur arrivée · L'équipage du groupe (membres et leur statut) s'affiche, avec écrire ou ajouter en ami · Dans les nouveaux groupes, chaque membre peut créer une lune · Une lune au nom d'un jeu prend sa jaquette
 - **1.4.56** (10 novembre 2026) : Onglet en ligne : nouvelle colonne Amis avec la liste complète (en jeu, en ligne, hors ligne, demandes, groupes) et les boutons Ajouter un ami, Créer un groupe et Mon identifiant, qui ne chevauchent plus la constellation · Écran de diagnostic du chiffrement retiré
-- **1.4.55** (10 novembre 2026) : Onglet en ligne : plus aucun chevauchement de la zone d'écriture, quel que soit le thème · Les étoiles de la constellation ne passent plus sous les boutons du bas · Ton avatar reste bien centré quand il est sélectionné
 
 ➡️ [Toutes les nouveautés, version par version](CHANGELOG.md)
 <!-- NOUVEAUTES:FIN -->

@@ -31,11 +31,11 @@ Installe-la, branche ta manette, et retrouve tous tes jeux (Steam, Epic, GOG, Ub
 <!-- NOUVEAUTES:DEBUT -->
 ## 🆕 Dernières nouveautés
 
+- **1.4.58** (10 novembre 2026) : Amis : si un ami quitte la conversation depuis une autre appli, il reste dans NOVA avec tout l'historique, et lui écrire le réinvite · Ajouter un ami parti le réinvite au lieu de dire qu'il est déjà ajouté · Une conversation relancée par un ami depuis une autre appli est acceptée d'office au lieu d'apparaître comme une demande d'ami
 - **1.4.57** (10 novembre 2026) : Groupes : les tables deviennent des lunes, et tous les membres accèdent d'office à toutes les lunes, même créées après leur arrivée · L'équipage du groupe (membres et leur statut) s'affiche, avec écrire ou ajouter en ami · Dans les nouveaux groupes, chaque membre peut créer une lune · Une lune au nom d'un jeu prend sa jaquette
 - **1.4.56** (10 novembre 2026) : Onglet en ligne : nouvelle colonne Amis avec la liste complète (en jeu, en ligne, hors ligne, demandes, groupes) et les boutons Ajouter un ami, Créer un groupe et Mon identifiant, qui ne chevauchent plus la constellation · Écran de diagnostic du chiffrement retiré
 - **1.4.55** (10 novembre 2026) : Onglet en ligne : plus aucun chevauchement de la zone d'écriture, quel que soit le thème · Les étoiles de la constellation ne passent plus sous les boutons du bas · Ton avatar reste bien centré quand il est sélectionné
 - **1.4.54** (10 novembre 2026) : Onglet en ligne : la zone d'écriture, les boutons et les messages ne se chevauchent plus quand ils sont sélectionnés
-- **1.4.53** (10 novembre 2026) : Messages chiffrés : NOVA vérifie désormais son propre appareil (signature croisée), pour qu'Element et les applis Matrix récentes lui envoient leurs clés · Nouvel écran Infos chiffrement dans les options d'une conversation
 
 ➡️ [Toutes les nouveautés, version par version](CHANGELOG.md)
 <!-- NOUVEAUTES:FIN -->

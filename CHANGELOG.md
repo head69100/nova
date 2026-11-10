@@ -7,6 +7,9 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.45](https://github.com/head69100/nova/releases/tag/v1.4.45)
+- Correction : plus de message d'erreur à la fermeture de NOVA quand une manette sur téléphone était connectée
+
 ### [NOVA 1.4.44](https://github.com/head69100/nova/releases/tag/v1.4.44)
 - Paramètres réorganisés en onglets clairs : Profils, Jeux, En jeu, Apparence, Son, Manette, Famille, Télé & réseau, Système
 - Sauvegardes dans le cloud : copie après chaque partie dans OneDrive, Google Drive, Dropbox ou sur une clé USB, sans compte à connecter dans NOVA

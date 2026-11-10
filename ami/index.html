@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invitation NOVA</title>
+<meta name="description" content="Un ami t’invite sur NOVA : ouvre le lien dans NOVA pour l’ajouter en un clic.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='74' fill='none' stroke='%2336e0ff' stroke-width='14'/%3E%3Cpath d='M74 126V74l52 52V74' fill='none' stroke='%23fff' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root { --bg: #05070f; --text: #f3f5fb; --muted: #9aa3bd; --line: rgba(255, 255, 255, 0.1); --a1: #36e0ff; --a2: #8b5cf6; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body { min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; color: var(--text); font: 16px/1.5 Inter, 'Segoe UI', system-ui, sans-serif;
+    background: radial-gradient(60rem 40rem at 50% -10%, rgba(139, 92, 246, 0.28), transparent 60%), radial-gradient(50rem 40rem at 90% 110%, rgba(54, 224, 255, 0.16), transparent 60%), var(--bg); }
+  body::before { content: ''; position: fixed; inset: 0; pointer-events: none; opacity: 0.5;
+    background-image: radial-gradient(1px 1px at 12% 20%, #fff, transparent), radial-gradient(1px 1px at 72% 12%, #fff, transparent), radial-gradient(1.5px 1.5px at 30% 70%, #fff, transparent), radial-gradient(1px 1px at 86% 58%, #fff, transparent), radial-gradient(1px 1px at 54% 88%, #fff, transparent), radial-gradient(1px 1px at 8% 92%, #fff, transparent); }
+  .card { position: relative; width: min(520px, 100%); padding: 34px 28px 28px; border-radius: 26px; border: 1px solid var(--line); text-align: center;
+    background: linear-gradient(170deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5); backdrop-filter: blur(14px); }
+  .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 800; letter-spacing: 0.32em; font-size: 14px; }
+  .brand svg { width: 30px; height: 30px; }
+  .star { width: 96px; height: 96px; margin: 26px auto 14px; border-radius: 50%; display: grid; place-items: center; font-size: 40px; font-weight: 800;
+    background: linear-gradient(135deg, var(--a2), #3d7bff); box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.85), 0 0 60px rgba(139, 92, 246, 0.6); }
+  h1 { margin: 0 0 6px; font-size: clamp(22px, 5vw, 28px); line-height: 1.2; }
+  .id { display: inline-block; margin: 2px 0 18px; padding: 4px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.07); color: var(--muted); font-size: 14px; word-break: break-all; }
+  p { margin: 0 0 18px; color: var(--muted); }
+  .btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 50px; padding: 0 20px; border-radius: 14px; border: 1px solid var(--line);
+    color: var(--text); background: rgba(255, 255, 255, 0.06); font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; }
+  .btn.primary { border: 0; color: #05070f; background: linear-gradient(90deg, var(--a1), #a78bfa); }
+  .btn + .btn { margin-top: 10px; }
+  .btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  .steps { margin: 22px 0 0; padding: 18px 18px 6px; border-radius: 16px; background: rgba(255, 255, 255, 0.04); text-align: left; }
+  .steps b { display: block; margin-bottom: 8px; font-size: 14px; }
+  .steps ol { margin: 0 0 12px; padding-left: 20px; color: var(--muted); font-size: 14px; }
+  .steps li { margin-bottom: 6px; }
+  .bad { display: none; }
+  .invalid .ok { display: none; }
+  .invalid .bad { display: block; }
+  small { display: block; margin-top: 16px; color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<main class="card" id="card">
+  <a class="brand" href="../"><svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="74" fill="none" stroke="#36e0ff" stroke-width="14"/><path d="M74 126V74l52 52V74" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/></svg>NOVA</a>
+  <div class="ok">
+    <div class="star" id="initial" aria-hidden="true">?</div>
+    <h1 id="title">Un ami t’invite sur NOVA</h1>
+    <span class="id" id="who"></span>
+    <p id="lead">Ouvre ce lien dans NOVA : il te propose de l’ajouter en ami, en un clic.</p>
+    <a class="btn primary" id="open" href="#">Ouvrir dans NOVA</a>
+    <button class="btn" id="copy" type="button">Copier son pseudo</button>
+    <div class="steps">
+      <b id="s-title">Pas encore NOVA ?</b>
+      <ol>
+        <li id="s1">Télécharge NOVA (gratuit) et installe-le.</li>
+        <li id="s2">Dans l’onglet « En ligne », connecte-toi ou crée ton compte (gratuit).</li>
+        <li id="s3">Reviens ici et clique sur « Ouvrir dans NOVA ».</li>
+      </ol>
+      <a class="btn" id="dl" href="https://github.com/head69100/nova/releases/latest">Télécharger NOVA</a>
+      <small id="note">Ça ne marche pas ? Dans NOVA : onglet « En ligne » › « Ajouter un ami », puis colle son pseudo.</small>
+    </div>
+  </div>
+  <div class="bad">
+    <h1 id="bad-title" style="margin-top:22px">Lien d’invitation incomplet</h1>
+    <p id="bad-text">Ce lien ne contient pas de pseudo valide. Demande à ton ami de te renvoyer son lien d’ami depuis NOVA.</p>
+    <a class="btn primary" href="../">Découvrir NOVA</a>
+  </div>
+</main>
+<script>
+  // Le pseudo vient de l'adresse (#@pseudo:serveur) : il est vérifié puis affiché en texte seulement.
+  (function () {
+    var en = !/^fr/i.test(navigator.language || '');
+    var raw = '';
+    try { raw = decodeURIComponent((location.hash || '').slice(1)).trim(); } catch (e) {}
+    var ok = /^@[a-z0-9._=\-\/+]{1,80}:[a-z0-9.\-]{2,120}(:\d{1,5})?$/i.test(raw);
+    var $ = function (id) { return document.getElementById(id); };
+    if (en) {
+      document.documentElement.lang = 'en';
+      document.title = 'NOVA invitation';
+      $('title').textContent = 'A friend invites you to NOVA';
+      $('lead').textContent = 'Open this link in NOVA: it offers to add them as a friend, in one click.';
+      $('open').textContent = 'Open in NOVA';
+      $('copy').textContent = 'Copy their username';
+      $('s-title').textContent = 'Don’t have NOVA yet?';
+      $('s1').textContent = 'Download NOVA (free) and install it.';
+      $('s2').textContent = 'In the “Online” tab, sign in or create your account (free).';
+      $('s3').textContent = 'Come back here and click “Open in NOVA”.';
+      $('dl').textContent = 'Download NOVA';
+      $('note').textContent = 'Not working? In NOVA: “Online” tab › “Add a friend”, then paste their username.';
+      $('bad-title').textContent = 'Incomplete invitation link';
+      $('bad-text').textContent = 'This link doesn’t contain a valid username. Ask your friend to send you their friend link from NOVA again.';
+    }
+    if (!ok) { $('card').classList.add('invalid'); return; }
+    var name = raw.slice(1).split(':')[0];
+    $('initial').textContent = name.charAt(0).toUpperCase();
+    $('who').textContent = raw;
+    $('title').textContent = en ? name + ' invites you to NOVA' : name + ' t’invite sur NOVA';
+    $('open').href = 'nova://ami/' + encodeURIComponent(raw);
+    $('copy').addEventListener('click', function () {
+      var done = function () { $('copy').textContent = en ? 'Copied ✓' : 'Copié ✓'; };
+      if (navigator.clipboard) navigator.clipboard.writeText(raw).then(done, function () {});
+    });
+  })();
+</script>
+</body>
+</html>

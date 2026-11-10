@@ -7,6 +7,11 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.63](https://github.com/head69100/nova/releases/tag/v1.4.63)
+- Appels compatibles Element : quand un ami t'appelle depuis Element, NOVA sonne (même en jeu, sauf en Ne pas déranger) et tu décroches ou refuses à la manette
+- Tu peux aussi appeler depuis NOVA un ami qui utilise Element
+- Pastille d'appel avec la durée, micro et raccrocher
+
 ### [NOVA 1.4.62](https://github.com/head69100/nova/releases/tag/v1.4.62)
 - Paramètres réorganisés : chaque onglet est rangé par thème avec des intertitres et une icône par réglage, et les sous-réglages n'apparaissent que si leur option est activée
 - Onglet en ligne : de vraies icônes à la place des émojis (statuts, créateur du groupe, réponses aux parties proposées, chiffrement)

@@ -7,6 +7,10 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.66](https://github.com/head69100/nova/releases/tag/v1.4.66)
+- Télé séparée (Paramètres › Télé & réseau) : quelqu'un joue sur la télé à la manette pendant que tu utilises ton PC normalement
+- La télé a son propre écran, le son du jeu part sur la télé et tes applis restent sur ton casque ou tes enceintes
+
 ### [NOVA 1.4.65](https://github.com/head69100/nova/releases/tag/v1.4.65)
 - Paramètres : l'aperçu d'une section n'affiche plus de lignes « undefined »
 
@@ -19,87 +23,87 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 - Tu peux aussi appeler depuis NOVA un ami qui utilise Element
 - Pastille d'appel avec la durée, micro et raccrocher
 
-### [NOVA 1.4.62](https://github.com/head69100/nova/releases/tag/v1.4.62)
+### NOVA 1.4.62
 - Paramètres réorganisés : chaque onglet est rangé par thème avec des intertitres et une icône par réglage, et les sous-réglages n'apparaissent que si leur option est activée
 - Onglet en ligne : de vraies icônes à la place des émojis (statuts, créateur du groupe, réponses aux parties proposées, chiffrement)
 - NOVA Vision retiré
 
-### [NOVA 1.4.61](https://github.com/head69100/nova/releases/tag/v1.4.61)
+### NOVA 1.4.61
 - Statut personnalisé : Dispo pour une partie, Ne pas déranger (coupe aussi les notifications en jeu), Absent ou un texte libre, visible sur ton étoile
 - Vocal dans les conversations et les lunes : son direct de PC à PC, plusieurs personnes, qui parle s'illumine, pastille En vocal partout dans NOVA, notification quand un ami t'appelle, raccourci manette pour couper le micro
 
-### [NOVA 1.4.60](https://github.com/head69100/nova/releases/tag/v1.4.60)
+### NOVA 1.4.60
 - Ajouter un ami devient simple : tape juste son pseudo, NOVA te montre le compte trouvé avant d'envoyer la demande
 - Nouveau lien d'ami à partager (Discord, SMS…) : un clic l'ouvre dans NOVA pour t'ajouter
 
-### [NOVA 1.4.59](https://github.com/head69100/nova/releases/tag/v1.4.59)
+### NOVA 1.4.59
 - Onglet en ligne : quand une discussion est ouverte, la vue du groupe ou de la constellation ne glisse plus sous la colonne Amis
 
-### [NOVA 1.4.58](https://github.com/head69100/nova/releases/tag/v1.4.58)
+### NOVA 1.4.58
 - Amis : si un ami quitte la conversation depuis une autre appli, il reste dans NOVA avec tout l'historique, et lui écrire le réinvite
 - Ajouter un ami parti le réinvite au lieu de dire qu'il est déjà ajouté
 - Une conversation relancée par un ami depuis une autre appli est acceptée d'office au lieu d'apparaître comme une demande d'ami
 
-### [NOVA 1.4.57](https://github.com/head69100/nova/releases/tag/v1.4.57)
+### NOVA 1.4.57
 - Groupes : les tables deviennent des lunes, et tous les membres accèdent d'office à toutes les lunes, même créées après leur arrivée
 - L'équipage du groupe (membres et leur statut) s'affiche, avec écrire ou ajouter en ami
 - Dans les nouveaux groupes, chaque membre peut créer une lune
 - Une lune au nom d'un jeu prend sa jaquette
 
-### [NOVA 1.4.56](https://github.com/head69100/nova/releases/tag/v1.4.56)
+### NOVA 1.4.56
 - Onglet en ligne : nouvelle colonne Amis avec la liste complète (en jeu, en ligne, hors ligne, demandes, groupes) et les boutons Ajouter un ami, Créer un groupe et Mon identifiant, qui ne chevauchent plus la constellation
 - Écran de diagnostic du chiffrement retiré
 
-### [NOVA 1.4.55](https://github.com/head69100/nova/releases/tag/v1.4.55)
+### NOVA 1.4.55
 - Onglet en ligne : plus aucun chevauchement de la zone d'écriture, quel que soit le thème
 - Les étoiles de la constellation ne passent plus sous les boutons du bas
 - Ton avatar reste bien centré quand il est sélectionné
 
-### [NOVA 1.4.54](https://github.com/head69100/nova/releases/tag/v1.4.54)
+### NOVA 1.4.54
 - Onglet en ligne : la zone d'écriture, les boutons et les messages ne se chevauchent plus quand ils sont sélectionnés
 
-### [NOVA 1.4.53](https://github.com/head69100/nova/releases/tag/v1.4.53)
+### NOVA 1.4.53
 - Messages chiffrés : NOVA vérifie désormais son propre appareil (signature croisée), pour qu'Element et les applis Matrix récentes lui envoient leurs clés
 - Nouvel écran Infos chiffrement dans les options d'une conversation
 
-### [NOVA 1.4.52](https://github.com/head69100/nova/releases/tag/v1.4.52)
+### NOVA 1.4.52
 - Messages chiffrés de bout en bout : NOVA lit et envoie les messages chiffrés (y compris avec Element et les autres applis Matrix)
 - Les nouvelles conversations et tables sont chiffrées dès le départ
 - Images chiffrées elles aussi
 
-### [NOVA 1.4.51](https://github.com/head69100/nova/releases/tag/v1.4.51)
+### NOVA 1.4.51
 - En ligne beaucoup plus rapide : la constellation et les conversations s'ouvrent instantanément
 - Les messages chiffrés envoyés depuis une autre appli Matrix s'affichent (avec une explication) au lieu de disparaître
 
-### [NOVA 1.4.50](https://github.com/head69100/nova/releases/tag/v1.4.50)
+### NOVA 1.4.50
 - Nouvelle interface en ligne « Constellation » : tes amis en étoiles autour de toi, tes groupes en planètes
 - Tables de jeu avec jaquettes, qui y joue et parties proposées avec réponses
 - Roue des messages à la manette, aussi en plein jeu (PS + pavé tactile)
 - Onglet en ligne et conversations bien plus rapides
 
-### [NOVA 1.4.49](https://github.com/head69100/nova/releases/tag/v1.4.49)
+### NOVA 1.4.49
 - Discord NOVA : messages privés avec tes amis, réactions, réponses, emojis et envoi de captures
 - Serveurs façon Discord : crée ton serveur avec ses salons (#général, #jeux…), invite tes amis, qui rejoignent tous les salons automatiquement
 - Notifications de messages par-dessus le jeu et dans NOVA, avec pastilles de messages non lus
 - À la manette : réponses rapides (Triangle), emojis (Options), réactions (Carré) et clavier à l'écran
 
-### [NOVA 1.4.48](https://github.com/head69100/nova/releases/tag/v1.4.48)
+### NOVA 1.4.48
 - En ligne : un ami qui utilise une autre appli Matrix (Element…) est affiché « Utilise une autre appli Matrix » au lieu de « Hors ligne »
 
-### [NOVA 1.4.47](https://github.com/head69100/nova/releases/tag/v1.4.47)
+### NOVA 1.4.47
 - NOVA en ligne (phase 1) : nouvel onglet « En ligne » avec connexion à un compte Matrix gratuit sur la page officielle du serveur (NOVA ne voit jamais ton mot de passe)
 - Amis, demandes d'ami et statut en direct (en ligne, « Joue à… »)
 - Contrôle parental : en ligne autorisé ou non par profil, nouveaux amis validés par le code du parent
 - NOVA reste 100 % local tant qu'on ne se connecte pas
 
-### [NOVA 1.4.46](https://github.com/head69100/nova/releases/tag/v1.4.46)
+### NOVA 1.4.46
 - NOVA en anglais : toute l'interface est traduite, la langue se choisit dans l'installateur et se change dans Paramètres › Système › Langue
 - Installateur bilingue (français / anglais)
 
-### [NOVA 1.4.45](https://github.com/head69100/nova/releases/tag/v1.4.45)
+### NOVA 1.4.45
 - Correction : plus de message d'erreur à la fermeture de NOVA quand une manette sur téléphone était connectée
 
-### [NOVA 1.4.44](https://github.com/head69100/nova/releases/tag/v1.4.44)
+### NOVA 1.4.44
 - Paramètres réorganisés en onglets clairs : Profils, Jeux, En jeu, Apparence, Son, Manette, Famille, Télé & réseau, Système
 - Sauvegardes dans le cloud : copie après chaque partie dans OneDrive, Google Drive, Dropbox ou sur une clé USB, sans compte à connecter dans NOVA
 - Téléphone en second écran (QR code) : partie, températures, capture, pause, son
@@ -108,21 +112,21 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 - Réseau maison : les autres PC NOVA, jeux en commun et invitations
 - NOVA Vision : un indice par une IA locale et gratuite (Ollama), Ctrl + Alt + V
 
-### [NOVA 1.4.43](https://github.com/head69100/nova/releases/tag/v1.4.43)
+### NOVA 1.4.43
 - Jaquettes des jeux Epic Games : images officielles du launcher Epic (même pour les jeux absents de Steam)
 - Les jaquettes manquantes sont recherchées automatiquement, ou à la demande dans Paramètres › Système › Avancé
 
-### [NOVA 1.4.42](https://github.com/head69100/nova/releases/tag/v1.4.42)
+### NOVA 1.4.42
 - Mode nuit : écran plus doux et musique plus basse le soir, petit rappel aux enfants qui jouent tard
 - Salon à deux : une deuxième manette = un deuxième profil, temps de jeu et trophées pour chacun
 - Jeux à deux sur le canapé : filtre dans la Bibliothèque
 - Mode « Maman arrive » (Ctrl + Alt + H) : le jeu se fige, le son se coupe et l'écran se cache
 - Écran PC ↔ Télé pendant une partie, sans la quitter (PS + Triangle ou Ctrl + Alt + T)
 
-### [NOVA 1.4.41](https://github.com/head69100/nova/releases/tag/v1.4.41)
+### NOVA 1.4.41
 - Jeux Epic Games détectés avec la nouvelle version du launcher Epic (ils s'ajoutent tout seuls, avec leur vrai nom)
 
-### [NOVA 1.4.40](https://github.com/head69100/nova/releases/tag/v1.4.40)
+### NOVA 1.4.40
 - Température du processeur : la fenêtre de confirmation de Windows s'affiche maintenant devant NOVA en plein écran
 - Tuile « Continuer » en tête de l'accueil sur ton dernier jeu
 - « Où j'en étais ? » : la dernière capture de ta partie et le temps écoulé
@@ -132,23 +136,23 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 - Son spatial dans les menus
 - Démarrage façon console : NOVA s'ouvre tout de suite au démarrage du PC, sans voir le bureau
 
-### [NOVA 1.4.39](https://github.com/head69100/nova/releases/tag/v1.4.39)
+### NOVA 1.4.39
 - Température du processeur dans les infos en jeu (PS + L1 ou Ctrl + Alt + I), à côté de celle de la carte graphique
 - Option à activer dans Paramètres › Système : NOVA installe une fois le service « NOVA Capteurs » (LibreHardwareMonitor + pilote PawnIO) avec ta confirmation Windows
 
-### [NOVA 1.4.38](https://github.com/head69100/nova/releases/tag/v1.4.38)
+### NOVA 1.4.38
 - Raccourcis clavier pour jouer sans manette (Ctrl + Alt + N, S, R, I, P, T, C, M), actifs même en jeu et modifiables
 
-### [NOVA 1.4.37](https://github.com/head69100/nova/releases/tag/v1.4.37)
+### NOVA 1.4.37
 - Infos en jeu (PS + L1) : température de la carte graphique, en couleur selon la chaleur
 
-### [NOVA 1.4.36](https://github.com/head69100/nova/releases/tag/v1.4.36)
+### NOVA 1.4.36
 - Mise à jour annoncée par une petite notification en haut à droite (plus de grand écran)
 - NOVA se met à jour depuis GitHub
 
 ## 9 novembre 2026
 
-### [NOVA 1.4.35](https://github.com/head69100/nova/releases/tag/v1.4.35)
+### NOVA 1.4.35
 - Le contenu qui défile s'estompe sous la barre d'onglets (plus de texte mélangé aux onglets)
 
 ### NOVA 1.4.34

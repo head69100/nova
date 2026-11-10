@@ -27,6 +27,27 @@ Install it, plug in your controller, and find all your games (Steam, Epic, GOG, 
 
 <sub>Screenshots taken with a demo library (made-up games).</sub>
 
+## 🌌 NOVA online: your constellation
+
+Meet your friends **without leaving your console**, with an interface built for controllers (nothing like a desktop chat app).
+
+![Your constellation: friends as stars around you, groups as planets](screenshots/11-en-ligne-constellation.jpg)
+
+- **Your constellation**: your friends are stars around you. The ones playing glow in their game's colors, and your groups are planets. The **Friends** column gives the full list, sorted by status.
+- **Groups and moons**: each group has its **moons**, one per game or topic, with the game's cover as a backdrop and the friends playing it. The **crew** (members) is shown, and every member gets access to every moon.
+- **"Tonight at 9 pm?"**: suggest a session, and your friends answer "I'm in" or "Can't" right on the card.
+- **The wheel**: Triangle opens a wheel of quick messages that you aim with the stick. And **mid-game**, PS + touchpad opens the wheel over the game so you can message a friend without quitting.
+- **End-to-end encrypted messages**, in-game notifications, reactions, shared screenshots.
+- **Open and free**: NOVA uses the **Matrix** network (free account on matrix.org). Your friends can also reply from Element or any Matrix app. NOVA stays 100% local until you sign in.
+
+| | |
+|---|---|
+| ![A group and its moons](screenshots/12-en-ligne-lunes.jpg) **A group**: its crew and moons, one per game | ![A conversation](screenshots/13-en-ligne-discussion.jpg) **A conversation**: with a session planned for tonight |
+
+<p align="center"><img src="screenshots/14-en-ligne-roue.jpg" width="70%" alt="The quick message wheel"><br><em>The quick message wheel, aimed with the stick</em></p>
+
+<sub>Online screenshots are shown with the French interface.</sub>
+
 ## ✨ What NOVA does
 
 - **All your games in one place**: automatic detection, with covers, backgrounds, logos and trailers fetched for you.
@@ -35,6 +56,7 @@ Install it, plug in your controller, and find all your games (Steam, Epic, GOG, 
 - **Profiles** with PIN codes, avatars, parental controls, separate saves per profile and a guest profile.
 - **Play on your TV** (with Sunshine and Moonlight): a controller shortcut turns on the TV and shows NOVA on it — and mid-game you can switch from the PC screen to the TV without quitting.
 - **Family**: night mode, player 2 tracked when two controllers play, couch co-op game list.
+- **NOVA online**: friends, groups and moons, encrypted messages, a message wheel even in game (see above).
 - **Your phone** (QR code): a second screen during play, or a controller for a friend, with nothing to install.
 - **NOVA Vision**: stuck? An AI running on your PC (free, no account) gives you a hint from a screenshot.
 - **Cloud saves** (OneDrive, Google Drive, Dropbox or a USB drive) and **mods per profile**.

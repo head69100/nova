@@ -7,6 +7,10 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.46](https://github.com/head69100/nova/releases/tag/v1.4.46)
+- NOVA en anglais : toute l'interface est traduite, la langue se choisit dans l'installateur et se change dans Paramètres › Système › Langue
+- Installateur bilingue (français / anglais)
+
 ### [NOVA 1.4.45](https://github.com/head69100/nova/releases/tag/v1.4.45)
 - Correction : plus de message d'erreur à la fermeture de NOVA quand une manette sur téléphone était connectée
 

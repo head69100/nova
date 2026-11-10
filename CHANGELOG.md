@@ -7,6 +7,12 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.50](https://github.com/head69100/nova/releases/tag/v1.4.50)
+- Nouvelle interface en ligne « Constellation » : tes amis en étoiles autour de toi, tes groupes en planètes
+- Tables de jeu avec jaquettes, qui y joue et parties proposées avec réponses
+- Roue des messages à la manette, aussi en plein jeu (PS + pavé tactile)
+- Onglet en ligne et conversations bien plus rapides
+
 ### [NOVA 1.4.49](https://github.com/head69100/nova/releases/tag/v1.4.49)
 - Discord NOVA : messages privés avec tes amis, réactions, réponses, emojis et envoi de captures
 - Serveurs façon Discord : crée ton serveur avec ses salons (#général, #jeux…), invite tes amis, qui rejoignent tous les salons automatiquement

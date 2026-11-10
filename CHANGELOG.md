@@ -7,6 +7,16 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.40](https://github.com/head69100/nova/releases/tag/v1.4.40)
+- Température du processeur : la fenêtre de confirmation de Windows s'affiche maintenant devant NOVA en plein écran
+- Tuile « Continuer » en tête de l'accueil sur ton dernier jeu
+- « Où j'en étais ? » : la dernière capture de ta partie et le temps écoulé
+- Écran de veille vivant avec les vraies captures de tes parties
+- Réglages par jeu : volume, sortie son et luminosité retenus pour chaque jeu, Ne pas déranger par jeu
+- Vérification avant de jouer : disque presque plein et programmes gourmands à fermer
+- Son spatial dans les menus
+- Démarrage façon console : NOVA s'ouvre tout de suite au démarrage du PC, sans voir le bureau
+
 ### [NOVA 1.4.39](https://github.com/head69100/nova/releases/tag/v1.4.39)
 - Température du processeur dans les infos en jeu (PS + L1 ou Ctrl + Alt + I), à côté de celle de la carte graphique
 - Option à activer dans Paramètres › Système : NOVA installe une fois le service « NOVA Capteurs » (LibreHardwareMonitor + pilote PawnIO) avec ta confirmation Windows

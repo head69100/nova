@@ -28,14 +28,33 @@ Installe-la, branche ta manette, et retrouve tous tes jeux (Steam, Epic, GOG, Ub
 
 <sub>Captures réalisées avec une bibliothèque de démonstration (jeux fictifs).</sub>
 
+## 🌌 NOVA en ligne : ta constellation
+
+Retrouve tes amis **sans quitter ta console**, avec une interface pensée pour la manette (rien à voir avec une messagerie de bureau).
+
+![Ta constellation : tes amis en étoiles autour de toi, tes groupes en planètes](screenshots/11-en-ligne-constellation.jpg)
+
+- **Ta constellation** : tes amis sont des étoiles autour de toi. Ceux qui jouent brillent aux couleurs de leur jeu, et tes groupes sont des planètes. La colonne **Amis** donne la liste complète, triée par statut.
+- **Groupes et lunes** : chaque groupe a ses **lunes**, une par jeu ou par sujet, avec la jaquette du jeu en décor et les amis qui y jouent. L'**équipage** (les membres) s'affiche, et chaque membre accède à toutes les lunes.
+- **« Ce soir 21 h ? »** : propose une partie, tes amis répondent « Je viens » ou « Pas dispo » directement sur la carte.
+- **La roue** : Triangle ouvre une roue de messages rapides, à viser au stick. Et **en plein jeu**, PS + pavé tactile ouvre la roue par-dessus le jeu pour écrire à un ami sans quitter la partie.
+- **Messages chiffrés de bout en bout**, notifications en jeu, réactions, captures d'écran partagées.
+- **Ouvert et gratuit** : NOVA utilise le réseau **Matrix** (compte gratuit sur matrix.org). Tes amis peuvent aussi te répondre depuis Element ou n'importe quelle appli Matrix. NOVA reste 100 % local tant que tu ne te connectes pas.
+
+| | |
+|---|---|
+| ![Un groupe et ses lunes](screenshots/12-en-ligne-lunes.jpg) **Un groupe** : l'équipage et ses lunes, une par jeu | ![Une discussion](screenshots/13-en-ligne-discussion.jpg) **Une discussion** : avec une partie proposée pour ce soir |
+
+<p align="center"><img src="screenshots/14-en-ligne-roue.jpg" width="70%" alt="La roue des messages rapides"><br><em>La roue des messages rapides, au stick</em></p>
+
 <!-- NOUVEAUTES:DEBUT -->
 ## 🆕 Dernières nouveautés
 
+- **1.4.59** (10 novembre 2026) : Onglet en ligne : quand une discussion est ouverte, la vue du groupe ou de la constellation ne glisse plus sous la colonne Amis
 - **1.4.58** (10 novembre 2026) : Amis : si un ami quitte la conversation depuis une autre appli, il reste dans NOVA avec tout l'historique, et lui écrire le réinvite · Ajouter un ami parti le réinvite au lieu de dire qu'il est déjà ajouté · Une conversation relancée par un ami depuis une autre appli est acceptée d'office au lieu d'apparaître comme une demande d'ami
 - **1.4.57** (10 novembre 2026) : Groupes : les tables deviennent des lunes, et tous les membres accèdent d'office à toutes les lunes, même créées après leur arrivée · L'équipage du groupe (membres et leur statut) s'affiche, avec écrire ou ajouter en ami · Dans les nouveaux groupes, chaque membre peut créer une lune · Une lune au nom d'un jeu prend sa jaquette
 - **1.4.56** (10 novembre 2026) : Onglet en ligne : nouvelle colonne Amis avec la liste complète (en jeu, en ligne, hors ligne, demandes, groupes) et les boutons Ajouter un ami, Créer un groupe et Mon identifiant, qui ne chevauchent plus la constellation · Écran de diagnostic du chiffrement retiré
 - **1.4.55** (10 novembre 2026) : Onglet en ligne : plus aucun chevauchement de la zone d'écriture, quel que soit le thème · Les étoiles de la constellation ne passent plus sous les boutons du bas · Ton avatar reste bien centré quand il est sélectionné
-- **1.4.54** (10 novembre 2026) : Onglet en ligne : la zone d'écriture, les boutons et les messages ne se chevauchent plus quand ils sont sélectionnés
 
 ➡️ [Toutes les nouveautés, version par version](CHANGELOG.md)
 <!-- NOUVEAUTES:FIN -->
@@ -48,6 +67,7 @@ Installe-la, branche ta manette, et retrouve tous tes jeux (Steam, Epic, GOG, Ub
 - **Profils** avec code PIN, avatars, contrôle parental, sauvegardes séparées par profil et profil invité.
 - **Jouer sur la télé** (avec Sunshine et Moonlight) : un raccourci manette allume la télé et y affiche NOVA, et en pleine partie tu passes de l'écran du PC à la télé sans quitter le jeu.
 - **Famille** : mode nuit, joueur 2 compté quand deux manettes jouent, jeux à deux sur le canapé.
+- **NOVA en ligne** : amis, groupes et lunes, messages chiffrés, roue des messages même en jeu (voir plus haut).
 - **Ton téléphone** (QR code) : second écran pendant la partie, ou manette pour un ami, sans rien installer.
 - **NOVA Vision** : bloqué ? une IA installée sur ton PC (gratuite, sans compte) te donne un indice à partir d'une capture.
 - **Sauvegardes dans le cloud** (OneDrive, Google Drive, Dropbox ou clé USB) et **mods par profil**.

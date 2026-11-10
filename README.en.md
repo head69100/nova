@@ -59,7 +59,6 @@ Meet your friends **without leaving your console**, with an interface built for 
 - **Family**: night mode, player 2 tracked when two controllers play, couch co-op game list.
 - **NOVA online**: friends, groups and moons, encrypted messages, a message wheel even in game (see above).
 - **Your phone** (QR code): a second screen during play, or a controller for a friend, with nothing to install.
-- **NOVA Vision**: stuck? An AI running on your PC (free, no account) gives you a hint from a screenshot.
 - **Cloud saves** (OneDrive, Google Drive, Dropbox or a USB drive) and **mods per profile**.
 - **Stats, trophies, weekly challenges, monthly recap and a journal** of your sessions.
 - **Controller and keyboard shortcuts**: screenshot, 30-second replay, in-game overlay with temperatures, pause…

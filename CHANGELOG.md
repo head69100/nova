@@ -7,6 +7,9 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.48](https://github.com/head69100/nova/releases/tag/v1.4.48)
+- En ligne : un ami qui utilise une autre appli Matrix (Element…) est affiché « Utilise une autre appli Matrix » au lieu de « Hors ligne »
+
 ### [NOVA 1.4.47](https://github.com/head69100/nova/releases/tag/v1.4.47)
 - NOVA en ligne (phase 1) : nouvel onglet « En ligne » avec connexion à un compte Matrix gratuit sur la page officielle du serveur (NOVA ne voit jamais ton mot de passe)
 - Amis, demandes d'ami et statut en direct (en ligne, « Joue à… »)

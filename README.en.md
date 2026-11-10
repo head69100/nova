@@ -33,6 +33,7 @@ Meet your friends **without leaving your console**, with an interface built for 
 
 ![Your constellation: friends as stars around you, groups as planets](screenshots/11-en-ligne-constellation.jpg)
 
+- **Adding friends, made simple**: just type their username (NOVA shows you the account it found before sending), or send your **friend link**: in one click it opens in NOVA and your friend adds you.
 - **Your constellation**: your friends are stars around you. The ones playing glow in their game's colors, and your groups are planets. The **Friends** column gives the full list, sorted by status.
 - **Groups and moons**: each group has its **moons**, one per game or topic, with the game's cover as a backdrop and the friends playing it. The **crew** (members) is shown, and every member gets access to every moon.
 - **"Tonight at 9 pm?"**: suggest a session, and your friends answer "I'm in" or "Can't" right on the card.

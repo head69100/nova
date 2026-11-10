@@ -7,6 +7,9 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.59](https://github.com/head69100/nova/releases/tag/v1.4.59)
+- Onglet en ligne : quand une discussion est ouverte, la vue du groupe ou de la constellation ne glisse plus sous la colonne Amis
+
 ### [NOVA 1.4.58](https://github.com/head69100/nova/releases/tag/v1.4.58)
 - Amis : si un ami quitte la conversation depuis une autre appli, il reste dans NOVA avec tout l'historique, et lui écrire le réinvite
 - Ajouter un ami parti le réinvite au lieu de dire qu'il est déjà ajouté

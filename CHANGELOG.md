@@ -7,6 +7,10 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.56](https://github.com/head69100/nova/releases/tag/v1.4.56)
+- Onglet en ligne : nouvelle colonne Amis avec la liste complète (en jeu, en ligne, hors ligne, demandes, groupes) et les boutons Ajouter un ami, Créer un groupe et Mon identifiant, qui ne chevauchent plus la constellation
+- Écran de diagnostic du chiffrement retiré
+
 ### [NOVA 1.4.55](https://github.com/head69100/nova/releases/tag/v1.4.55)
 - Onglet en ligne : plus aucun chevauchement de la zone d'écriture, quel que soit le thème
 - Les étoiles de la constellation ne passent plus sous les boutons du bas

@@ -7,6 +7,15 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.44](https://github.com/head69100/nova/releases/tag/v1.4.44)
+- Paramètres réorganisés en onglets clairs : Profils, Jeux, En jeu, Apparence, Son, Manette, Famille, Télé & réseau, Système
+- Sauvegardes dans le cloud : copie après chaque partie dans OneDrive, Google Drive, Dropbox ou sur une clé USB, sans compte à connecter dans NOVA
+- Téléphone en second écran (QR code) : partie, températures, capture, pause, son
+- Inviter un ami par QR code : son téléphone devient une manette
+- Mods en un clic, profil par profil
+- Réseau maison : les autres PC NOVA, jeux en commun et invitations
+- NOVA Vision : un indice par une IA locale et gratuite (Ollama), Ctrl + Alt + V
+
 ### [NOVA 1.4.43](https://github.com/head69100/nova/releases/tag/v1.4.43)
 - Jaquettes des jeux Epic Games : images officielles du launcher Epic (même pour les jeux absents de Steam)
 - Les jaquettes manquantes sont recherchées automatiquement, ou à la demande dans Paramètres › Système › Avancé

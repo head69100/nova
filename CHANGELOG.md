@@ -7,6 +7,10 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.39](https://github.com/head69100/nova/releases/tag/v1.4.39)
+- Température du processeur dans les infos en jeu (PS + L1 ou Ctrl + Alt + I), à côté de celle de la carte graphique
+- Option à activer dans Paramètres › Système : NOVA installe une fois le service « NOVA Capteurs » (LibreHardwareMonitor + pilote PawnIO) avec ta confirmation Windows
+
 ### [NOVA 1.4.38](https://github.com/head69100/nova/releases/tag/v1.4.38)
 - Raccourcis clavier pour jouer sans manette (Ctrl + Alt + N, S, R, I, P, T, C, M), actifs même en jeu et modifiables
 

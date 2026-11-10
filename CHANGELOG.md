@@ -7,6 +7,9 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.67](https://github.com/head69100/nova/releases/tag/v1.4.67)
+- Télé séparée : l'écran télé est retrouvé plus sûrement juste après l'installation du pilote
+
 ### [NOVA 1.4.66](https://github.com/head69100/nova/releases/tag/v1.4.66)
 - Télé séparée (Paramètres › Télé & réseau) : quelqu'un joue sur la télé à la manette pendant que tu utilises ton PC normalement
 - La télé a son propre écran, le son du jeu part sur la télé et tes applis restent sur ton casque ou tes enceintes
@@ -18,7 +21,7 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 - En ligne : quand le serveur Matrix demande de patienter (trop de demandes), NOVA attend tout seul et réessaie, sinon il dit clairement combien de temps attendre
 - NOVA envoie moins de demandes en arrière-plan (statut rafraîchi moins souvent, une seule fois par ami)
 
-### [NOVA 1.4.63](https://github.com/head69100/nova/releases/tag/v1.4.63)
+### NOVA 1.4.63
 - Appels compatibles Element : quand un ami t'appelle depuis Element, NOVA sonne (même en jeu, sauf en Ne pas déranger) et tu décroches ou refuses à la manette
 - Tu peux aussi appeler depuis NOVA un ami qui utilise Element
 - Pastille d'appel avec la durée, micro et raccrocher

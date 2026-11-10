@@ -7,6 +7,12 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.49](https://github.com/head69100/nova/releases/tag/v1.4.49)
+- Discord NOVA : messages privés avec tes amis, réactions, réponses, emojis et envoi de captures
+- Serveurs façon Discord : crée ton serveur avec ses salons (#général, #jeux…), invite tes amis, qui rejoignent tous les salons automatiquement
+- Notifications de messages par-dessus le jeu et dans NOVA, avec pastilles de messages non lus
+- À la manette : réponses rapides (Triangle), emojis (Options), réactions (Carré) et clavier à l'écran
+
 ### [NOVA 1.4.48](https://github.com/head69100/nova/releases/tag/v1.4.48)
 - En ligne : un ami qui utilise une autre appli Matrix (Element…) est affiché « Utilise une autre appli Matrix » au lieu de « Hors ligne »
 

@@ -3,583 +3,546 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080a12">
-  <meta name="description" content="NOVA rassemble tes jeux PC dans une interface plein écran pensée pour la manette. Gratuit sur Windows.">
   <title>NOVA — Ton PC devient une console</title>
-  <link rel="icon" type="image/png" href="screenshots/nova-icon.png">
+  <meta name="description" content="NOVA rassemble tous tes jeux PC dans une interface plein écran pensée pour la manette. Gratuit, pour Windows 10 et 11.">
+  <meta name="theme-color" content="#05070f">
+  <meta property="og:title" content="NOVA — Ton PC devient une console">
+  <meta property="og:description" content="Tous tes jeux PC, une seule interface, pensée pour la manette. Gratuit sur Windows.">
+  <meta property="og:image" content="https://head69100.github.io/nova/screenshots/01-accueil-neon.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237fb2ff'/%3E%3Cstop offset='.5' stop-color='%23a77bff'/%3E%3Cstop offset='1' stop-color='%2336e0ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='200' height='200' rx='46' fill='%2305070f'/%3E%3Ccircle cx='100' cy='100' r='70' fill='none' stroke='url(%23g)' stroke-width='12'/%3E%3Cpath d='M74 126V74l52 52V74' fill='none' stroke='%23fff' stroke-width='13' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: dark;
-      --bg: #080a12;
-      --panel: #10131f;
-      --text: #f5f6ff;
-      --muted: #a0a5ba;
-      --line: rgba(255, 255, 255, .1);
-      --blue: #7ba7ff;
-      --purple: #b19aff;
-      --cyan: #62dff5;
-      --content: 1160px;
-      font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
-      font-synthesis: none;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-      scroll-behavior: smooth;
+      --bg: #05070f;
+      --bg2: #0a0e1c;
+      --card: rgba(255, 255, 255, 0.045);
+      --card-hi: rgba(255, 255, 255, 0.075);
+      --line: rgba(255, 255, 255, 0.09);
+      --text: #f2f4fb;
+      --muted: #9aa3bb;
+      --dim: #6b7390;
+      --blue: #7fb2ff;
+      --violet: #a77bff;
+      --cyan: #36e0ff;
+      --grad: linear-gradient(110deg, var(--blue), var(--violet) 55%, var(--cyan));
+      --max: 1180px;
+      --r: 20px;
     }
-
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      min-width: 320px;
-      margin: 0;
-      color: var(--text);
-      background:
-        radial-gradient(ellipse at 76% 10%, rgba(84, 89, 190, .2), transparent 34rem),
-        radial-gradient(ellipse at 5% 34%, rgba(40, 113, 175, .1), transparent 27rem),
-        var(--bg);
-    }
-    a { color: inherit; text-decoration: none; }
-    a:focus-visible, button:focus-visible {
-      outline: 2px solid var(--cyan);
-      outline-offset: 4px;
+      margin: 0; min-width: 320px; background: var(--bg); color: var(--text);
+      font: 16px/1.6 Inter, 'Segoe UI', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;
     }
     img { display: block; max-width: 100%; }
-    .wrap { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    a { color: inherit; text-decoration: none; }
+    :focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 6px; }
+    .wrap { width: min(var(--max), 100% - 40px); margin-inline: auto; }
+    h1, h2, h3 { font-family: 'Space Grotesk', Inter, sans-serif; letter-spacing: -0.03em; margin: 0; }
+    .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); }
 
-    .topbar {
-      position: relative;
-      z-index: 2;
-      border-bottom: 1px solid rgba(255, 255, 255, .07);
-      background: rgba(8, 10, 18, .72);
-      backdrop-filter: blur(18px);
-    }
-    .nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-    .brand { display: inline-flex; align-items: center; gap: 11px; }
-    .brand-mark {
-      width: 38px;
-      aspect-ratio: 1;
-      border-radius: 11px;
-      box-shadow: 0 0 24px rgba(121, 145, 255, .18);
-    }
-    .brand-mark img { width: 100%; height: 100%; border-radius: inherit; }
-    .brand-name { font-size: 19px; font-weight: 800; letter-spacing: .18em; }
-    .brand-name span {
-      display: block;
-      margin-top: 2px;
-      color: var(--muted);
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-    }
-    .nav-links { display: flex; align-items: center; gap: 30px; color: #c5c8d6; font-size: 13px; }
-    .nav-links a:not(.button):hover { color: #fff; }
-    .button {
-      min-height: 46px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 0 19px;
-      border: 1px solid rgba(176, 190, 255, .4);
-      border-radius: 12px;
-      color: #fff;
-      background: linear-gradient(115deg, #667bea, #9074df 58%, #597fe0);
-      box-shadow: 0 8px 26px rgba(111, 121, 228, .24), inset 0 1px rgba(255, 255, 255, .2);
-      font-size: 14px;
-      font-weight: 700;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .button:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(111, 121, 228, .34); }
-    .button svg { width: 17px; height: 17px; }
-    .button.secondary {
-      border-color: var(--line);
-      background: rgba(255, 255, 255, .045);
-      box-shadow: none;
-    }
-    .menu-toggle {
-      display: none;
-      width: 42px;
-      height: 42px;
-      border: 1px solid var(--line);
-      border-radius: 11px;
-      color: var(--text);
-      background: rgba(255, 255, 255, .05);
-      cursor: pointer;
-    }
-
-    .hero { padding: 94px 0 82px; overflow: hidden; }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
-      align-items: center;
-      gap: 55px;
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      color: #c7c9f8;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .17em;
-      text-transform: uppercase;
-    }
-    .eyebrow::before {
-      width: 20px;
-      height: 1px;
-      content: "";
-      background: linear-gradient(90deg, var(--cyan), var(--purple));
-    }
-    h1 {
-      max-width: 600px;
-      margin: 20px 0 18px;
-      font-size: clamp(46px, 6vw, 78px);
-      line-height: .99;
-      letter-spacing: -.065em;
-    }
-    h1 span {
-      color: transparent;
-      background: linear-gradient(100deg, #9fbaff 4%, #c3a6ff 55%, #77e7f2);
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-    .hero-copy {
-      max-width: 480px;
-      margin: 0;
-      color: #b1b5c8;
-      font-size: 17px;
-      line-height: 1.75;
-    }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-    .hero-note { margin: 16px 0 0; color: #81869b; font-size: 12px; }
-    .hero-note strong { color: #b9bed0; font-weight: 600; }
-    .hero-art {
-      position: relative;
-      min-width: 0;
-      perspective: 1000px;
-    }
-    .hero-art::before {
-      position: absolute;
-      inset: 9% -8% -7% 13%;
-      border-radius: 50%;
-      content: "";
-      background: linear-gradient(135deg, rgba(82, 115, 255, .34), rgba(180, 95, 235, .25));
-      filter: blur(70px);
-    }
-    .screen {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(226, 232, 255, .23);
-      border-radius: 20px;
-      background: #101321;
-      box-shadow: 0 28px 80px rgba(0, 0, 0, .56), 0 0 0 7px rgba(255, 255, 255, .025);
-      transform: rotateY(-7deg) rotateX(2deg) rotateZ(-1deg);
-    }
-    .screen img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
-    .screen-caption {
-      position: absolute;
-      inset: auto 0 0;
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 38px 21px 17px;
-      background: linear-gradient(0deg, rgba(4, 6, 14, .88), transparent);
-    }
-    .screen-caption b { font-size: 13px; }
-    .screen-caption span { color: #ccd1e4; font-size: 11px; }
-    .floating-chip {
-      position: absolute;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      padding: 11px 14px;
-      border: 1px solid rgba(255, 255, 255, .14);
-      border-radius: 14px;
-      background: rgba(17, 20, 34, .86);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, .32);
-      backdrop-filter: blur(12px);
-      font-size: 12px;
-      font-weight: 650;
-    }
-    .floating-chip svg { width: 18px; height: 18px; color: #a6b8ff; }
-    .chip-top { top: 11%; right: -5%; }
-    .chip-bottom { bottom: 10%; left: -7%; }
-
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      padding: 24px;
-      border-block: 1px solid var(--line);
-      color: #9da2b6;
-      font-size: 12px;
-    }
-    .trust-row span { padding: 6px 12px; border: 1px solid rgba(255, 255, 255, .08); border-radius: 999px; background: rgba(255, 255, 255, .025); }
-
-    section.content { padding: 100px 0; }
-    .section-heading { max-width: 630px; margin: 0 auto 46px; text-align: center; }
-    .section-heading .eyebrow { justify-content: center; }
-    h2 { margin: 15px 0 13px; font-size: clamp(32px, 4vw, 48px); line-height: 1.08; letter-spacing: -.045em; }
-    .section-heading p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.75; }
-    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .feature {
-      min-height: 210px;
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-radius: 17px;
-      background: linear-gradient(145deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .018));
-      transition: border-color .2s ease, transform .2s ease;
-    }
-    .feature:hover { transform: translateY(-3px); border-color: rgba(161, 174, 255, .3); }
-    .feature-icon {
-      display: grid;
-      width: 42px;
-      height: 42px;
-      place-items: center;
-      margin-bottom: 20px;
-      border: 1px solid rgba(165, 176, 255, .18);
-      border-radius: 13px;
-      color: #b5c5ff;
-      background: linear-gradient(145deg, rgba(120, 148, 255, .16), rgba(114, 223, 234, .06));
-    }
-    .feature-icon svg { width: 21px; height: 21px; }
-    .feature h3 { margin: 0 0 9px; font-size: 16px; }
-    .feature p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
-
-    .showcase { padding-top: 24px !important; }
-    .gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
-    .shot {
-      position: relative;
-      grid-column: span 6;
-      overflow: hidden;
-      min-width: 0;
-      border: 1px solid var(--line);
-      border-radius: 17px;
-      background: var(--panel);
-    }
-    .shot img {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      transition: transform .45s ease;
-    }
-    .shot:hover img { transform: scale(1.035); }
-    .shot figcaption {
-      position: absolute;
-      inset: auto 0 0;
-      padding: 42px 18px 16px;
-      color: #fff;
-      background: linear-gradient(0deg, rgba(4, 6, 14, .9), transparent);
-      font-size: 13px;
-      font-weight: 650;
-    }
-    .gallery .shot:nth-child(n + 3) { grid-column: span 4; }
-
-    .play-section { padding-top: 10px !important; }
-    .play-card {
-      position: relative;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 30px;
-      overflow: hidden;
-      padding: 38px 44px;
-      border: 1px solid rgba(166, 173, 255, .19);
-      border-radius: 22px;
+    /* fond : halo + grain d'étoiles */
+    .sky { position: fixed; inset: 0; z-index: -1; pointer-events: none;
       background:
-        radial-gradient(ellipse at 90% 50%, rgba(123, 123, 255, .2), transparent 44%),
-        linear-gradient(120deg, #121727, #111322 70%);
-    }
-    .play-card h2 { margin: 0 0 10px; font-size: clamp(25px, 3.2vw, 36px); }
-    .play-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
-    .play-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-    .play-meta span { padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; color: #c5c9d9; font-size: 11px; }
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
-    .step { display: flex; gap: 13px; align-items: flex-start; }
-    .step-num {
-      flex: 0 0 30px;
-      display: grid;
-      width: 30px;
-      height: 30px;
-      place-items: center;
-      border: 1px solid rgba(166, 177, 255, .24);
-      border-radius: 10px;
-      color: #c3c6ff;
-      background: rgba(141, 146, 255, .1);
-      font-size: 12px;
-      font-weight: 700;
-    }
-    .step b { display: block; margin: 1px 0 5px; font-size: 13px; }
-    .step p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+        radial-gradient(60rem 40rem at 80% -10%, rgba(167, 123, 255, 0.18), transparent 60%),
+        radial-gradient(50rem 35rem at -10% 20%, rgba(54, 224, 255, 0.09), transparent 60%),
+        radial-gradient(40rem 30rem at 50% 110%, rgba(127, 178, 255, 0.10), transparent 60%), var(--bg); }
+    .sky::after { content: ''; position: absolute; inset: 0; opacity: 0.5;
+      background-image: radial-gradient(1px 1px at 12% 18%, #fff8, transparent), radial-gradient(1px 1px at 72% 34%, #fff6, transparent),
+        radial-gradient(1px 1px at 38% 72%, #fff5, transparent), radial-gradient(1.5px 1.5px at 86% 78%, #fff7, transparent),
+        radial-gradient(1px 1px at 22% 88%, #fff4, transparent), radial-gradient(1px 1px at 58% 12%, #fff6, transparent); }
 
-    footer { border-top: 1px solid var(--line); }
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding-block: 26px;
-      color: #858a9e;
-      font-size: 11px;
-    }
-    .footer-links { display: flex; gap: 18px; }
-    .footer-links a:hover { color: #fff; }
+    /* barre du haut */
+    header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(18px) saturate(1.3); background: rgba(5, 7, 15, 0.7); border-bottom: 1px solid var(--line); }
+    .nav { height: 68px; display: flex; align-items: center; gap: 28px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk'; font-weight: 700; letter-spacing: 0.32em; font-size: 15px; }
+    .brand svg { width: 32px; height: 32px; }
+    .nav-links { display: flex; gap: 26px; margin-left: auto; font-size: 14px; color: var(--muted); }
+    .nav-links a:hover { color: var(--text); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 48px; padding: 0 22px; border-radius: 14px; font-weight: 600; font-size: 15px; border: 1px solid transparent; transition: transform 0.2s, box-shadow 0.2s, background 0.2s; white-space: nowrap; }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+    .btn-main { background: #fff; color: #0a0d16; box-shadow: 0 10px 40px rgba(127, 178, 255, 0.25); }
+    .btn-main:hover { transform: translateY(-2px); box-shadow: 0 16px 50px rgba(167, 123, 255, 0.35); }
+    .btn-ghost { background: var(--card); border-color: var(--line); color: var(--text); }
+    .btn-ghost:hover { background: var(--card-hi); }
+    .btn-sm { height: 40px; padding: 0 16px; font-size: 14px; border-radius: 12px; }
+    .menu { display: none; margin-left: auto; width: 42px; height: 42px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); color: var(--text); }
 
-    @media (max-width: 820px) {
-      .hero { padding-top: 72px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
-      .hero-copy { max-width: 570px; }
-      .hero-art { width: min(660px, 94%); margin-inline: auto; }
-      .feature-grid { grid-template-columns: repeat(2, 1fr); }
-      .play-card { grid-template-columns: 1fr; padding: 32px; }
-      .play-card > .button { justify-self: start; }
+    /* héros */
+    .hero { padding: 84px 0 40px; text-align: center; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 8px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); font-size: 13px; color: var(--muted); }
+    .badge b { padding: 2px 9px; border-radius: 999px; background: var(--grad); color: #05070f; font-size: 11px; letter-spacing: 0.04em; }
+    .hero h1 { margin: 24px auto 18px; font-size: clamp(44px, 8vw, 96px); line-height: 0.98; max-width: 14ch; }
+    .hero p.lead { margin: 0 auto; max-width: 640px; font-size: clamp(16px, 1.6vw, 19px); color: var(--muted); }
+    .hero-cta { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .hero-meta { margin-top: 16px; font-size: 13px; color: var(--dim); }
+
+    /* écran (télé) */
+    .tv { position: relative; margin: 64px auto 0; max-width: 1080px; }
+    .tv::before { content: ''; position: absolute; inset: 8% 6% -6%; background: var(--grad); filter: blur(90px); opacity: 0.35; border-radius: 50%; z-index: -1; }
+    .tv-frame { border-radius: 22px; padding: 10px; background: linear-gradient(180deg, #1b2033, #0c0f1b); border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6); }
+    .tv-frame img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; }
+    .hints { position: absolute; right: 26px; bottom: 26px; display: flex; gap: 8px; }
+    .hint { display: flex; align-items: center; gap: 8px; padding: 7px 12px 7px 7px; border-radius: 12px; background: rgba(5, 7, 15, 0.78); border: 1px solid var(--line); backdrop-filter: blur(10px); font-size: 12.5px; font-weight: 600; }
+    .key { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: #fff; color: #0a0d16; font-size: 12px; font-weight: 800; }
+
+    /* bandeau compatibilité */
+    .compat { margin-top: 64px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 28px; color: var(--dim); font-weight: 600; font-size: 14px; }
+    .compat span { display: inline-flex; align-items: center; gap: 8px; }
+    .compat span::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--violet); opacity: 0.7; }
+
+    section { padding: 110px 0; }
+    .head { max-width: 700px; margin-bottom: 52px; }
+    .head.center { margin-inline: auto; text-align: center; }
+    .head h2 { margin: 14px 0 14px; font-size: clamp(32px, 4.6vw, 54px); line-height: 1.04; }
+    .head p { margin: 0; color: var(--muted); font-size: 17px; }
+
+    /* thèmes : sélecteur façon console */
+    .themes { display: grid; grid-template-columns: 300px 1fr; gap: 28px; align-items: center; }
+    .theme-list { display: flex; flex-direction: column; gap: 8px; }
+    .theme-btn { text-align: left; display: flex; gap: 14px; align-items: center; padding: 14px 16px; border-radius: 16px; border: 1px solid transparent; background: transparent; color: var(--muted); font: inherit; cursor: pointer; transition: background 0.2s, border-color 0.2s, color 0.2s; }
+    .theme-btn:hover { background: var(--card); color: var(--text); }
+    .theme-btn[aria-selected='true'] { background: var(--card-hi); border-color: rgba(167, 123, 255, 0.4); color: var(--text); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04); }
+    .theme-btn i { width: 40px; height: 40px; border-radius: 12px; flex: none; }
+    .theme-btn b { display: block; font-size: 16px; color: var(--text); }
+    .theme-btn small { font-size: 13px; }
+    .theme-view { position: relative; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: var(--bg2); aspect-ratio: 16 / 9; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45); }
+    .theme-view img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.03); transition: opacity 0.6s ease, transform 1.2s ease; }
+    .theme-view img.on { opacity: 1; transform: none; }
+
+    /* fonctionnalités : grille « bento » */
+    .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+    .tile { position: relative; overflow: hidden; padding: 28px; border-radius: var(--r); border: 1px solid var(--line); background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.015)); }
+    .tile h3 { font-size: 21px; margin: 16px 0 8px; }
+    .tile p { margin: 0; color: var(--muted); font-size: 15px; }
+    .ico { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; background: rgba(127, 178, 255, 0.1); border: 1px solid rgba(127, 178, 255, 0.2); color: var(--blue); }
+    .ico svg { width: 22px; height: 22px; }
+    .w3 { grid-column: span 3; } .w2 { grid-column: span 2; } .w4 { grid-column: span 4; }
+    .tile.media { padding-bottom: 0; display: flex; flex-direction: column; }
+    .tile.media img { margin-top: 24px; border-radius: 12px 12px 0 0; border: 1px solid var(--line); border-bottom: 0; aspect-ratio: 16 / 8; object-fit: cover; object-position: top; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .chips span { padding: 5px 11px; border-radius: 999px; background: rgba(255, 255, 255, 0.06); border: 1px solid var(--line); font-size: 12.5px; color: var(--muted); }
+
+    /* galerie */
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .shot { margin: 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: var(--bg2); cursor: zoom-in; }
+    .shot img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; transition: transform 0.5s ease; }
+    .shot:hover img { transform: scale(1.04); }
+    .shot figcaption { padding: 12px 16px 14px; font-size: 14px; color: var(--muted); }
+    .shot figcaption b { color: var(--text); font-weight: 600; }
+    .lightbox { position: fixed; inset: 0; z-index: 50; display: none; place-items: center; padding: 24px; background: rgba(2, 3, 8, 0.92); backdrop-filter: blur(6px); cursor: zoom-out; }
+    .lightbox.on { display: grid; }
+    .lightbox img { max-height: 88vh; border-radius: 14px; box-shadow: 0 30px 100px rgba(0, 0, 0, 0.7); }
+
+    /* installation */
+    .install { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; align-items: stretch; }
+    .steps { display: grid; gap: 14px; counter-reset: s; }
+    .step { display: flex; gap: 18px; padding: 22px; border-radius: 18px; border: 1px solid var(--line); background: var(--card); }
+    .step::before { counter-increment: s; content: counter(s); flex: none; width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: var(--grad); color: #05070f; font-weight: 800; font-family: 'Space Grotesk'; }
+    .step b { display: block; font-size: 17px; margin-bottom: 4px; }
+    .step p { margin: 0; color: var(--muted); font-size: 15px; }
+    .step code { font-size: 13px; padding: 2px 7px; border-radius: 6px; background: rgba(255, 255, 255, 0.08); color: var(--text); }
+    .dl { display: flex; flex-direction: column; justify-content: space-between; gap: 22px; padding: 32px; border-radius: 22px; border: 1px solid rgba(167, 123, 255, 0.3);
+      background: radial-gradient(30rem 20rem at 100% 0%, rgba(167, 123, 255, 0.22), transparent 70%), linear-gradient(160deg, #121733, #0b0e1d); }
+    .dl h3 { font-size: 28px; }
+    .dl .ver { color: var(--muted); font-size: 15px; margin-top: 8px; }
+    .dl ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; color: var(--muted); font-size: 15px; }
+    .dl li { display: flex; gap: 10px; align-items: center; }
+    .dl li::before { content: ''; width: 18px; height: 18px; flex: none; border-radius: 50%; background: rgba(54, 224, 255, 0.15) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2336e0ff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12 4 4 8-8'/%3E%3C/svg%3E") center / 12px no-repeat; }
+
+    /* nouveautés */
+    .news { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .rel { padding: 24px; border-radius: 18px; border: 1px solid var(--line); background: var(--card); display: flex; flex-direction: column; gap: 10px; }
+    .rel-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+    .rel-top b { font-family: 'Space Grotesk'; font-size: 20px; }
+    .rel-top span { font-size: 13px; color: var(--dim); }
+    .rel ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 14.5px; display: grid; gap: 6px; }
+    .rel.skeleton { min-height: 180px; background: linear-gradient(90deg, var(--card), var(--card-hi), var(--card)); background-size: 200% 100%; animation: shimmer 1.6s linear infinite; }
+    @keyframes shimmer { to { background-position: -200% 0; } }
+    .more { margin-top: 22px; text-align: center; }
+    .more a { color: var(--blue); font-weight: 600; }
+
+    /* FAQ */
+    .faq { max-width: 820px; margin: 0 auto; display: grid; gap: 10px; }
+    details { border-radius: 16px; border: 1px solid var(--line); background: var(--card); padding: 0 22px; }
+    summary { list-style: none; cursor: pointer; padding: 20px 0; font-weight: 600; font-size: 17px; display: flex; justify-content: space-between; gap: 16px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; font-size: 22px; line-height: 1; color: var(--muted); transition: transform 0.2s; }
+    details[open] summary::after { transform: rotate(45deg); }
+    details p { margin: 0 0 20px; color: var(--muted); }
+
+    /* appel final + pied */
+    .final { text-align: center; padding: 70px 24px; border-radius: 28px; border: 1px solid var(--line);
+      background: radial-gradient(40rem 20rem at 50% 0%, rgba(127, 178, 255, 0.18), transparent 70%), var(--bg2); }
+    .final h2 { font-size: clamp(30px, 4.5vw, 52px); margin: 12px 0 14px; }
+    .final p { color: var(--muted); margin: 0 auto 28px; max-width: 520px; }
+    footer { padding: 46px 0 60px; color: var(--dim); font-size: 13.5px; }
+    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; align-items: center; }
+    .foot nav { display: flex; flex-wrap: wrap; gap: 20px; }
+    .foot nav a:hover { color: var(--text); }
+    .legal { margin-top: 18px; font-size: 12.5px; line-height: 1.6; }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    @media (max-width: 960px) {
+      .themes, .install { grid-template-columns: 1fr; }
+      .theme-list { flex-direction: row; overflow-x: auto; padding-bottom: 4px; }
+      .theme-btn { flex: none; }
+      .theme-btn small { display: none; }
+      .bento { grid-template-columns: repeat(2, 1fr); }
+      .w3, .w2, .w4 { grid-column: span 1; }
+      .tile.wide-m { grid-column: span 2; }
+      .gallery, .news { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 620px) {
-      .wrap { width: min(var(--content), calc(100% - 36px)); }
-      .nav { min-height: 68px; }
-      .menu-toggle { display: grid; place-items: center; }
-      .menu-toggle svg { width: 20px; height: 20px; }
-      .nav-links {
-        position: absolute;
-        top: calc(100% + 1px);
-        right: 0;
-        left: 0;
-        display: none;
-        align-items: stretch;
-        gap: 0;
-        padding: 9px 18px 17px;
-        border-bottom: 1px solid var(--line);
-        background: rgba(8, 10, 18, .97);
-      }
-      .nav-links.open { display: flex; flex-direction: column; }
-      .nav-links a:not(.button) { padding: 13px 4px; }
-      .nav-links .button { margin-top: 7px; }
-      .hero { padding: 60px 0 58px; }
-      h1 { font-size: clamp(44px, 13vw, 64px); }
-      .hero-copy { font-size: 15px; }
-      .hero-actions { align-items: stretch; }
-      .hero-actions .button { flex: 1 1 180px; }
-      .screen { border-radius: 13px; transform: none; }
-      .chip-top { right: -4%; top: -8%; }
-      .chip-bottom { left: -4%; bottom: -9%; }
-      .floating-chip { padding: 9px 11px; font-size: 10px; }
-      .trust-row { gap: 7px; padding: 18px 12px; font-size: 10px; }
-      .trust-row span { padding: 6px 9px; }
-      section.content { padding: 72px 0; }
-      .section-heading { margin-bottom: 30px; }
-      .feature-grid { grid-template-columns: 1fr; }
-      .feature { min-height: 0; }
-      .gallery { gap: 11px; }
-      .shot, .gallery .shot:nth-child(n + 3) { grid-column: span 12; }
-      .shot figcaption { padding: 34px 14px 12px; }
-      .play-card { padding: 25px 22px; }
-      .steps { grid-template-columns: 1fr; gap: 17px; }
-      .footer-inner { align-items: flex-start; flex-direction: column; }
+    @media (max-width: 680px) {
+      .wrap { width: calc(100% - 32px); }
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; gap: 0; padding: 8px 16px 16px; background: rgba(5, 7, 15, 0.97); border-bottom: 1px solid var(--line); }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 13px 4px; }
+      .menu { display: grid; place-items: center; }
+      .nav .btn-sm { display: none; }
+      .hero { padding-top: 56px; }
+      .hero-cta .btn { width: 100%; }
+      .hints { display: none; }
+      section { padding: 76px 0; }
+      .bento, .gallery, .news { grid-template-columns: 1fr; }
+      .tile.wide-m { grid-column: span 1; }
+      .tile { padding: 22px; }
+      .step { padding: 18px; }
+      .dl { padding: 24px; }
     }
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .theme-view img, .shot img, .btn { transition: none; }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <nav class="nav wrap" aria-label="Navigation principale">
-      <a class="brand" href="#" aria-label="NOVA, accueil">
-        <span class="brand-mark" aria-hidden="true">
-          <img src="screenshots/nova-icon.png" alt="">
-        </span>
-        <span class="brand-name">NOVA<span>Game Hub</span></span>
+  <div class="sky" aria-hidden="true"></div>
+
+  <header>
+    <div class="nav wrap">
+      <a class="brand" href="#" aria-label="NOVA, retour en haut">
+        <svg viewBox="0 0 200 200" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7fb2ff"/><stop offset=".5" stop-color="#a77bff"/><stop offset="1" stop-color="#36e0ff"/></linearGradient></defs><circle cx="100" cy="100" r="80" fill="none" stroke="url(#lg)" stroke-width="12"/><path d="M72 128V72l56 56V72" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        NOVA
       </a>
-      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <nav class="nav-links" id="links" aria-label="Sections">
+        <a href="#themes">Thèmes</a>
+        <a href="#fonctions">Fonctions</a>
+        <a href="#installer">Installer</a>
+        <a href="#nouveautes">Nouveautés</a>
+        <a href="#faq">Questions</a>
+      </nav>
+      <a class="btn btn-main btn-sm js-dl" href="https://github.com/head69100/nova/releases/latest">Télécharger</a>
+      <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="links">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
-      <div class="nav-links" id="nav-links">
-        <a href="#fonctionnalites">Fonctionnalités</a>
-        <a href="#aperçu">Aperçu</a>
-        <a href="#installation">Installation</a>
-        <a class="button" href="https://github.com/head69100/nova/releases/latest">
-          Télécharger NOVA
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-    </nav>
+    </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-grid wrap">
-        <div>
-          <div class="eyebrow">NOVA Game Hub · Windows</div>
-          <h1>Ton PC<br>devient une <span>console.</span></h1>
-          <p class="hero-copy">Tous tes jeux au même endroit. Une interface plein écran faite pour jouer depuis ton canapé, à la manette ou au clavier.</p>
-          <div class="hero-actions">
-            <a class="button" href="https://github.com/head69100/nova/releases/latest">
-              Télécharger gratuitement
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a class="button secondary" href="#aperçu">Découvrir NOVA</a>
-          </div>
-          <p class="hero-note"><strong>Gratuit · Windows 10/11 · 64 bits</strong> · Manette conseillée, clavier et souris compatibles</p>
+    <!-- Héros -->
+    <section class="hero" style="padding-bottom:0">
+      <div class="wrap">
+        <a class="badge" href="#nouveautes"><b class="js-ver">NOUVEAU</b><span class="js-ver-text">Les dernières nouveautés de NOVA</span></a>
+        <h1>Ton PC devient une <span class="grad">console.</span></h1>
+        <p class="lead">Tous tes jeux Steam, Epic, GOG, Ubisoft et EA réunis dans une seule interface plein écran. Prends ta manette, installe-toi dans le canapé : NOVA s’occupe du reste.</p>
+        <div class="hero-cta">
+          <a class="btn btn-main js-dl" href="https://github.com/head69100/nova/releases/latest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 19h14"/></svg>
+            <span class="js-dl-label">Télécharger gratuitement</span>
+          </a>
+          <a class="btn btn-ghost" href="#themes">Voir l’interface</a>
         </div>
-        <div class="hero-art">
-          <div class="floating-chip chip-top">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10h10a4 4 0 0 1 3.8 5l-.8 2.5a2 2 0 0 1-3.3.8L14.5 16h-5l-2.2 2.3a2 2 0 0 1-3.3-.8L3.2 15A4 4 0 0 1 7 10Z" stroke="currentColor" stroke-width="1.6"/><path d="M8 12v4m-2-2h4m6-1h.01M18 15h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            Prêt à jouer à la manette
+        <div class="hero-meta">Gratuit · Windows 10 et 11 (64 bits) · Manette conseillée, clavier et souris acceptés</div>
+
+        <div class="tv reveal">
+          <div class="tv-frame"><img src="screenshots/01-accueil-neon.jpg" alt="L’écran d’accueil de NOVA : les jaquettes des jeux et le jeu sélectionné en grand" width="1920" height="1080" fetchpriority="high"></div>
+          <div class="hints" aria-hidden="true">
+            <span class="hint"><span class="key">✕</span>Jouer</span>
+            <span class="hint"><span class="key">▢</span>Favori</span>
+            <span class="hint"><span class="key">≡</span>Options</span>
           </div>
-          <div class="screen">
-            <img src="https://raw.githubusercontent.com/head69100/nova/main/screenshots/01-accueil-neon.jpg" alt="Écran d'accueil NOVA en thème Néon" fetchpriority="high">
-            <div class="screen-caption"><b>Ta bibliothèque, en grand écran</b><span>Interface NOVA</span></div>
+        </div>
+
+        <div class="compat" aria-label="Compatible avec">
+          <span>Steam</span><span>Epic Games</span><span>GOG</span><span>Ubisoft Connect</span><span>EA app</span><span>DualSense</span><span>DualShock 4</span><span>Manettes Xbox</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thèmes -->
+    <section id="themes">
+      <div class="wrap">
+        <div class="head reveal">
+          <div class="kicker">Quatre ambiances</div>
+          <h2>Pas juste des couleurs.<br>Toute la disposition change.</h2>
+          <p>Chaque thème réorganise l’accueil à sa façon. Choisis le tien en un clic dans les Paramètres, et change d’avis quand tu veux.</p>
+        </div>
+        <div class="themes reveal">
+          <div class="theme-list" role="tablist" aria-label="Thèmes">
+            <button class="theme-btn" role="tab" aria-selected="true" data-i="0"><i style="background:linear-gradient(135deg,#3d7bff,#a77bff)"></i><span><b>Néon</b><small>La rangée de jaquettes, le jeu en grand</small></span></button>
+            <button class="theme-btn" role="tab" aria-selected="false" data-i="1"><i style="background:linear-gradient(135deg,#d9c6a0,#6b5638)"></i><span><b>Vitrine</b><small>Le jeu à l’honneur, plein écran</small></span></button>
+            <button class="theme-btn" role="tab" aria-selected="false" data-i="2"><i style="background:linear-gradient(135deg,#ffb000,#ff3d81)"></i><span><b>Rétro arcade</b><small>Une liste façon borne d’arcade</small></span></button>
+            <button class="theme-btn" role="tab" aria-selected="false" data-i="3"><i style="background:linear-gradient(135deg,#9ad1c0,#2f5d62)"></i><span><b>Zen</b><small>Une grande jaquette au centre</small></span></button>
           </div>
-          <div class="floating-chip chip-bottom">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 9h8M8 12h5M8 15h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            Steam, Epic, GOG et plus
+          <div class="theme-view" role="tabpanel" aria-live="polite">
+            <img class="on" src="screenshots/01-accueil-neon.jpg" alt="Thème Néon" loading="lazy">
+            <img src="screenshots/02-accueil-vitrine.jpg" alt="Thème Vitrine" loading="lazy">
+            <img src="screenshots/03-accueil-retro.jpg" alt="Thème Rétro arcade" loading="lazy">
+            <img src="screenshots/04-accueil-zen.jpg" alt="Thème Zen" loading="lazy">
           </div>
         </div>
       </div>
     </section>
 
-    <div class="trust-row" aria-label="Compatibilité">
-      <span>Steam</span><span>Epic Games</span><span>GOG</span><span>Ubisoft</span><span>EA</span><span>DualSense</span><span>Xbox</span><span>DualShock 4</span>
-    </div>
-
-    <section class="content" id="fonctionnalites">
+    <!-- Fonctions -->
+    <section id="fonctions" style="padding-top:20px">
       <div class="wrap">
-        <div class="section-heading">
-          <div class="eyebrow">Tout au même endroit</div>
-          <h2>Moins de menus.<br>Plus de jeu.</h2>
-          <p>NOVA transforme ton PC en console de salon : tu retrouves tes jeux, tes profils et tes infos dans une interface claire, pensée pour rester loin du bureau.</p>
+        <div class="head center reveal">
+          <div class="kicker">Ce que fait NOVA</div>
+          <h2>Tout ce qu’une console fait.<br><span class="grad">Et ce qu’elle ne fait pas.</span></h2>
         </div>
-        <div class="feature-grid">
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5v-11Z" stroke="currentColor" stroke-width="1.7"/><path d="M8 4v16M11 8h5m-5 4h5m-5 4h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
-            <h3>Une bibliothèque unifiée</h3>
-            <p>Retrouve tes jeux Steam, Epic, GOG, Ubisoft, EA et tes jeux installés, avec leurs jaquettes et leurs visuels.</p>
+        <div class="bento">
+          <article class="tile media w4 wide-m reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="7" rx="1.5"/><rect x="14" y="4" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+            <h3>Une seule bibliothèque pour tous tes jeux</h3>
+            <p>NOVA trouve tout seul les jeux installés, récupère jaquettes, fonds, logos et bandes-annonces, ajoute les nouveaux et retire ceux que tu désinstalles.</p>
+            <img src="screenshots/06-bibliotheque.jpg" alt="La bibliothèque de NOVA" loading="lazy">
           </article>
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 10h10a4 4 0 0 1 3.8 5l-.8 2.5a2 2 0 0 1-3.3.8L14.5 16h-5l-2.2 2.3a2 2 0 0 1-3.3-.8L3.2 15A4 4 0 0 1 7 10Z" stroke="currentColor" stroke-width="1.7"/><path d="M8 12v4m-2-2h4m6-1h.01M18 15h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
-            <h3>Conçue pour la manette</h3>
-            <p>Navigation à la manette Xbox, DualSense ou DualShock 4, avec raccourcis pratiques. Le clavier et la souris fonctionnent aussi.</p>
+          <article class="tile w2 reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9h10a4 4 0 0 1 3.9 4.9l-.7 3a2 2 0 0 1-3.4.9L14.5 16h-5l-2.3 1.8a2 2 0 0 1-3.4-.9l-.7-3A4 4 0 0 1 7 9Z"/><path d="M8 11.5v3M6.5 13h3M16 12h.01M18 14h.01"/></svg></div>
+            <h3>Pensé pour la manette</h3>
+            <p>DualSense, DualShock 4 ou Xbox. Batterie affichée, vibrations, barre lumineuse aux couleurs du jeu, et une manette Xbox virtuelle pour les jeux capricieux.</p>
           </article>
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0m3-9a3 3 0 1 0 0-6m1 9a5 5 0 0 1 2 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
-            <h3>Des profils pour chacun</h3>
-            <p>Profils personnalisés, code PIN, contrôle parental et sauvegardes séparées pour partager le salon en famille.</p>
+          <article class="tile w2 reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <h3>Sur la télé du salon</h3>
+            <p>Un raccourci allume la télé et y affiche NOVA (Sunshine + Moonlight). En pleine partie, passe de l’écran du PC à la télé sans quitter le jeu.</p>
           </article>
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m0 14h16M8 15l3-4 3 2 5-7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19" cy="6" r="1.5" fill="currentColor"/></svg></div>
-            <h3>Stats et trophées</h3>
-            <p>Temps de jeu, défis, trophées et carnet de bord pour garder un œil sur tes parties et tes progrès.</p>
+          <article class="tile w2 reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0M16.5 4.5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5"/></svg></div>
+            <h3>Toute la famille</h3>
+            <p>Profils avec code PIN, contrôle parental, sauvegardes séparées par profil, mode nuit, et un joueur 2 compté quand deux manettes jouent.</p>
           </article>
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 21h8m-4-4v4m2-11-2-2-2 2m2-2v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>Du PC au salon</h3>
-            <p>Joue sur ta télé avec Sunshine et Moonlight. Utilise aussi ton téléphone comme second écran ou manette via QR code.</p>
+          <article class="tile w2 reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg></div>
+            <h3>Ton téléphone s’invite</h3>
+            <p>Un QR code et il devient second écran (températures, capture, pause) — ou la manette d’un ami, sans rien installer.</p>
           </article>
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 11a8 8 0 0 0-14.9-4M4 4v4h4m-4 5a8 8 0 0 0 14.9 4M20 20v-4h-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>À jour sans effort</h3>
-            <p>NOVA te prévient quand une nouvelle version est prête et se met à jour sans réinstallation complète.</p>
+          <article class="tile w3 reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3Z"/></svg></div>
+            <h3>Bloqué ? NOVA Vision</h3>
+            <p>Une capture du jeu, et une IA installée sur ton PC te souffle un indice sans tout dévoiler. Gratuit, sans compte, rien ne sort de chez toi.</p>
+            <div class="chips"><span>IA locale</span><span>Ctrl + Alt + V</span><span>Aussi sur le téléphone</span></div>
+          </article>
+          <article class="tile w3 reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-6"/></svg></div>
+            <h3>Stats, trophées et souvenirs</h3>
+            <p>Temps de jeu, défis de la semaine, trophées, récap du mois et carnet de bord avec les captures de tes parties.</p>
+            <div class="chips"><span>Replay 30 s</span><span>Infos en jeu</span><span>Températures</span></div>
+          </article>
+          <article class="tile w2 reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.6-9A6 6 0 0 1 18 8.5a4 4 0 0 1-.5 9.5H7Z"/><path d="M12 11v6m0 0 2.5-2.5M12 17l-2.5-2.5"/></svg></div>
+            <h3>Sauvegardes à l’abri</h3>
+            <p>Après chaque partie, une copie part dans OneDrive, Google Drive, Dropbox ou sur une clé USB.</p>
+          </article>
+          <article class="tile w2 reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4.5 19.5 9.5 9 20H4v-5L14.5 4.5Z"/><path d="m12 7 5 5"/></svg></div>
+            <h3>Mods par profil</h3>
+            <p>Chacun coche ses mods : NOVA les met en place au lancement et remet les fichiers d’origine ensuite.</p>
+          </article>
+          <article class="tile w2 reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.9-4M4 4v4h4M4 13a8 8 0 0 0 14.9 4M20 20v-4h-4"/></svg></div>
+            <h3>Toujours à jour</h3>
+            <p>Une petite notification en haut à droite, et NOVA se met à jour sans réinstallation.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="content showcase" id="aperçu">
+    <!-- Galerie -->
+    <section style="padding-top:20px">
       <div class="wrap">
-        <div class="section-heading">
-          <div class="eyebrow">À chacun son ambiance</div>
-          <h2>Ton écran. Ton style.</h2>
-          <p>Choisis la présentation qui te ressemble, puis navigue dans ta bibliothèque comme sur une console.</p>
+        <div class="head reveal">
+          <div class="kicker">En images</div>
+          <h2>Fais le tour du propriétaire.</h2>
+          <p>Captures réalisées avec une bibliothèque de démonstration (jeux fictifs).</p>
         </div>
         <div class="gallery">
-          <figure class="shot">
-            <img src="https://raw.githubusercontent.com/head69100/nova/main/screenshots/02-accueil-vitrine.jpg" alt="Thème Vitrine, avec un jeu mis en avant" loading="lazy">
-            <figcaption>Vitrine — le jeu à l'honneur</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="https://raw.githubusercontent.com/head69100/nova/main/screenshots/03-accueil-retro.jpg" alt="Thème Rétro arcade de NOVA" loading="lazy">
-            <figcaption>Rétro arcade — ambiance borne d'arcade</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="https://raw.githubusercontent.com/head69100/nova/main/screenshots/04-accueil-zen.jpg" alt="Thème Zen de NOVA" loading="lazy">
-            <figcaption>Zen — une jaquette au centre</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="https://raw.githubusercontent.com/head69100/nova/main/screenshots/06-bibliotheque.jpg" alt="Bibliothèque de jeux NOVA" loading="lazy">
-            <figcaption>Bibliothèque — tous tes jeux, triés comme tu veux</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="https://raw.githubusercontent.com/head69100/nova/main/screenshots/08-stats-famille.jpg" alt="Profils et statistiques famille dans NOVA" loading="lazy">
-            <figcaption>Famille — profils et défis partagés</figcaption>
-          </figure>
+          <figure class="shot reveal"><img src="screenshots/05-page-du-jeu.jpg" alt="Page d’un jeu avec ses statistiques" loading="lazy"><figcaption><b>Page du jeu</b> — stats et dernières parties</figcaption></figure>
+          <figure class="shot reveal"><img src="screenshots/07-stats.jpg" alt="Statistiques et trophées" loading="lazy"><figcaption><b>Stats</b> — défis de la semaine et trophées</figcaption></figure>
+          <figure class="shot reveal"><img src="screenshots/08-stats-famille.jpg" alt="Défis entre profils de la famille" loading="lazy"><figcaption><b>Famille</b> — défis entre profils</figcaption></figure>
+          <figure class="shot reveal"><img src="screenshots/09-parametres-apercu.jpg" alt="Paramètres avec aperçu explicatif" loading="lazy"><figcaption><b>Paramètres</b> — chaque réglage expliqué</figcaption></figure>
+          <figure class="shot reveal"><img src="screenshots/10-qui-joue.jpg" alt="Écran de choix du profil" loading="lazy"><figcaption><b>Qui joue ?</b> — profils et code PIN</figcaption></figure>
+          <figure class="shot reveal"><img src="screenshots/03-accueil-retro.jpg" alt="Thème Rétro arcade" loading="lazy"><figcaption><b>Rétro arcade</b> — l’ambiance borne d’arcade</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <section class="content play-section" id="installation">
+    <!-- Installation -->
+    <section id="installer">
       <div class="wrap">
-        <div class="play-card">
-          <div>
-            <div class="eyebrow">Prêt pour la partie ?</div>
-            <h2>Installe. Branche. Joue.</h2>
-            <p>NOVA est gratuit et conçu pour les PC Windows. Télécharge l'installateur, crée ton profil et laisse NOVA retrouver tes jeux.</p>
-            <div class="play-meta"><span>Windows 10 / 11</span><span>64 bits</span><span>Gratuit</span></div>
-          </div>
-          <a class="button" href="https://github.com/head69100/nova/releases/latest">
-            Télécharger la dernière version
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="head reveal">
+          <div class="kicker">Installer NOVA</div>
+          <h2>Trois minutes, et c’est parti.</h2>
         </div>
-        <div class="steps" aria-label="Étapes d'installation">
-          <div class="step"><span class="step-num">1</span><div><b>Télécharge NOVA</b><p>Récupère l'installateur depuis la dernière version officielle.</p></div></div>
-          <div class="step"><span class="step-num">2</span><div><b>Installe en quelques clics</b><p>L'installation se fait dans ton profil Windows, sans droits administrateur.</p></div></div>
-          <div class="step"><span class="step-num">3</span><div><b>Retrouve tes jeux</b><p>Crée ton profil, connecte une manette si tu veux, et lance ta partie.</p></div></div>
+        <div class="install">
+          <div class="steps">
+            <div class="step reveal"><div><b>Télécharge l’installateur</b><p>Le fichier <code class="js-file">NOVA-Setup.exe</code> se trouve dans la dernière version publiée sur GitHub.</p></div></div>
+            <div class="step reveal"><div><b>Lance-le</b><p>Windows peut afficher « Windows a protégé votre ordinateur » : l’installateur n’est pas encore signé. Clique sur <b style="display:inline;font-size:inherit">Informations complémentaires</b> puis <b style="display:inline;font-size:inherit">Exécuter quand même</b>. Pas besoin de droits administrateur.</p></div></div>
+            <div class="step reveal"><div><b>Crée ton profil</b><p>Branche ta manette, choisis ton avatar : NOVA trouve tes jeux tout seul.</p></div></div>
+          </div>
+          <div class="dl reveal">
+            <div>
+              <h3>NOVA pour Windows</h3>
+              <div class="ver js-ver-line">Dernière version sur GitHub</div>
+            </div>
+            <ul>
+              <li>Gratuit, sans publicité</li>
+              <li>Windows 10 et 11, 64 bits</li>
+              <li>Mises à jour automatiques</li>
+              <li>Fonctionne sans compte</li>
+            </ul>
+            <a class="btn btn-main js-dl" href="https://github.com/head69100/nova/releases/latest">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 19h14"/></svg>
+              <span class="js-dl-label">Télécharger gratuitement</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nouveautés (chargées depuis GitHub) -->
+    <section id="nouveautes" style="padding-top:20px">
+      <div class="wrap">
+        <div class="head reveal">
+          <div class="kicker">Ça bouge souvent</div>
+          <h2>Les dernières nouveautés.</h2>
+          <p>NOVA évolue presque chaque jour. Voici les trois dernières versions.</p>
+        </div>
+        <div class="news" id="news">
+          <div class="rel skeleton"></div><div class="rel skeleton"></div><div class="rel skeleton"></div>
+        </div>
+        <div class="more"><a href="https://github.com/head69100/nova/blob/main/CHANGELOG.md">Toutes les versions →</a></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" style="padding-top:20px">
+      <div class="wrap">
+        <div class="head center reveal">
+          <div class="kicker">Questions</div>
+          <h2>Bon à savoir.</h2>
+        </div>
+        <div class="faq reveal">
+          <details><summary>NOVA est vraiment gratuit ?</summary><p>Oui, sans publicité ni abonnement. Si tu veux soutenir le projet, il y a le bouton Sponsor sur la page GitHub, mais ce n’est jamais obligatoire.</p></details>
+          <details><summary>Est-ce que ça remplace Steam ou Epic ?</summary><p>Non : NOVA réunit tes jeux et les lance via leurs launchers habituels. Tes achats, succès et sauvegardes en ligne restent chez Steam, Epic, GOG, Ubisoft ou EA.</p></details>
+          <details><summary>Quelles manettes fonctionnent ?</summary><p>DualSense (PS5), DualShock 4 (PS4) et les manettes Xbox, en USB ou en Bluetooth. NOVA peut aussi créer une manette Xbox virtuelle pour les jeux qui ne reconnaissent pas la DualSense. Le clavier et la souris marchent partout.</p></details>
+          <details><summary>Pourquoi Windows affiche un avertissement ?</summary><p>L’installateur n’est pas encore signé numériquement, ce qui coûte cher pour un projet gratuit. Le code ne contient rien de caché : clique sur « Informations complémentaires » puis « Exécuter quand même ».</p></details>
+          <details><summary>Mes données partent-elles quelque part ?</summary><p>Non. NOVA fonctionne sur ton PC. Il télécharge seulement les jaquettes et les bandes-annonces des jeux, et vérifie les mises à jour sur GitHub. L’IA de NOVA Vision tourne elle aussi sur ton PC.</p></details>
+          <details><summary>Je peux jouer sur ma télé ?</summary><p>Oui, avec Sunshine sur le PC et l’appli Moonlight sur la télé (Android TV, Google TV…). NOVA installe et règle Sunshine pour toi, puis un raccourci manette allume la télé et y affiche NOVA.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appel final -->
+    <section style="padding-top:20px">
+      <div class="wrap">
+        <div class="final reveal">
+          <div class="kicker">Prêt à jouer ?</div>
+          <h2>Ton canapé t’attend.</h2>
+          <p>Télécharge NOVA, branche ta manette, et redécouvre tes jeux PC comme sur une console.</p>
+          <a class="btn btn-main js-dl" href="https://github.com/head69100/nova/releases/latest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 19h14"/></svg>
+            <span class="js-dl-label">Télécharger gratuitement</span>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-inner wrap">
-      <span>© <span id="year">2026</span> NOVA Game Hub · Gratuit pour un usage personnel.</span>
-      <div class="footer-links">
-        <a href="https://github.com/head69100/nova">GitHub</a>
-        <a href="https://github.com/head69100/nova/releases/latest">Nouveautés</a>
-        <a href="https://github.com/head69100/nova/blob/main/LICENSE.md">Licence</a>
+    <div class="wrap">
+      <div class="foot">
+        <span>© <span id="year">2026</span> NOVA · Gratuit pour un usage personnel</span>
+        <nav aria-label="Liens">
+          <a href="https://github.com/head69100/nova">GitHub</a>
+          <a href="https://github.com/head69100/nova/releases">Versions</a>
+          <a href="https://github.com/head69100/nova/blob/main/CHANGELOG.md">Nouveautés</a>
+          <a href="https://github.com/head69100/nova/blob/main/LICENSE.md">Licence</a>
+          <a href="https://github.com/head69100/nova/blob/main/CREDITS.md">Crédits</a>
+          <a href="https://github.com/sponsors/head69100">Soutenir</a>
+        </nav>
       </div>
-    </div>
-    <div class="wrap" style="padding: 0 0 22px; color: #686e82; font-size: 10px; line-height: 1.6;">
-      NOVA est un logiciel indépendant, sans affiliation ni approbation de Sony, Microsoft, Valve ou des éditeurs des jeux cités. Les captures utilisent une bibliothèque de démonstration.
+      <p class="legal">NOVA est un logiciel indépendant, sans lien avec Sony, Microsoft, Valve, Epic Games, GOG, Ubisoft, Electronic Arts ou Philips. Les noms et marques cités appartiennent à leurs propriétaires. Les captures utilisent une bibliothèque de démonstration avec des jeux fictifs.</p>
     </div>
   </footer>
 
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Capture agrandie"><img alt=""></div>
+
   <script>
-    const menuButton = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
+    const REPO = 'head69100/nova';
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    menuButton.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-      menuButton.setAttribute("aria-expanded", String(isOpen));
-      menuButton.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
+    // menu mobile
+    const menu = document.querySelector('.menu'), links = document.getElementById('links');
+    menu.addEventListener('click', () => { const o = links.classList.toggle('open'); menu.setAttribute('aria-expanded', o); });
+    links.addEventListener('click', (e) => { if (e.target.closest('a')) { links.classList.remove('open'); menu.setAttribute('aria-expanded', false); } });
+
+    // sélecteur de thèmes (clic, flèches du clavier, et défilement automatique tant qu'on n'y touche pas)
+    const tabs = [...document.querySelectorAll('.theme-btn')], views = [...document.querySelectorAll('.theme-view img')];
+    let cur = 0, auto = true;
+    const show = (i) => { cur = i; tabs.forEach((t, k) => t.setAttribute('aria-selected', k === i)); views.forEach((v, k) => v.classList.toggle('on', k === i)); };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => { auto = false; show(i); });
+      t.addEventListener('keydown', (e) => { if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); auto = false; show((cur + 1) % tabs.length); tabs[cur].focus(); } if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); auto = false; show((cur + tabs.length - 1) % tabs.length); tabs[cur].focus(); } });
     });
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(() => { if (auto && !document.hidden) show((cur + 1) % tabs.length); }, 4500);
 
-    navLinks.addEventListener("click", (event) => {
-      if (event.target.closest("a")) {
-        navLinks.classList.remove("open");
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.setAttribute("aria-label", "Ouvrir le menu");
-      }
-    });
+    // apparition douce au défilement
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
-    document.querySelector("#year").textContent = new Date().getFullYear();
+    // captures en grand
+    const lb = document.getElementById('lightbox'), lbImg = lb.querySelector('img');
+    document.querySelectorAll('.shot img, .tile.media img').forEach((img) => img.addEventListener('click', () => { lbImg.src = img.src; lbImg.alt = img.alt; lb.classList.add('on'); }));
+    lb.addEventListener('click', () => lb.classList.remove('on'));
+    addEventListener('keydown', (e) => { if (e.key === 'Escape') lb.classList.remove('on'); });
+
+    // dernière version + nouveautés, en direct depuis GitHub
+    const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const day = (iso) => new Date(iso).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+    const items = (body) => (body || '').split('\n').filter((l) => /^\s*[-*]\s+/.test(l)).map((l) => l.replace(/^\s*[-*]\s+/, '').replace(/\*\*/g, '')).slice(0, 4);
+    fetch(`https://api.github.com/repos/${REPO}/releases?per_page=3`)
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((list) => {
+        if (!list.length) throw 0;
+        const last = list[0], v = last.tag_name.replace(/^v/, '');
+        const exe = (last.assets || []).find((a) => /^NOVA-Setup-.*\.exe$/i.test(a.name));
+        if (exe) {
+          document.querySelectorAll('.js-dl').forEach((a) => (a.href = exe.browser_download_url));
+          document.querySelectorAll('.js-file').forEach((c) => (c.textContent = exe.name));
+        }
+        document.querySelectorAll('.js-dl-label').forEach((s) => (s.textContent = `Télécharger NOVA ${v}`));
+        document.querySelector('.js-ver').textContent = 'v' + v;
+        document.querySelector('.js-ver-text').textContent = `Nouvelle version du ${day(last.published_at)} — voir les nouveautés`;
+        document.querySelector('.js-ver-line').textContent = `Version ${v} · ${day(last.published_at)}${exe ? ' · ' + Math.round(exe.size / 1048576) + ' Mo' : ''}`;
+        document.getElementById('news').innerHTML = list.map((r) => {
+          const li = items(r.body);
+          return `<article class="rel"><div class="rel-top"><b>${esc(r.tag_name)}</b><span>${day(r.published_at)}</span></div><ul>${(li.length ? li : ['Améliorations et corrections']).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></article>`;
+        }).join('');
+      })
+      .catch(() => {
+        document.getElementById('news').innerHTML = '<article class="rel"><p style="margin:0;color:var(--muted)">Les nouveautés n’ont pas pu être chargées. Retrouve-les sur la page des versions.</p></article>';
+      });
   </script>
 </body>
 </html>

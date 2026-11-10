@@ -31,11 +31,11 @@ Installe-la, branche ta manette, et retrouve tous tes jeux (Steam, Epic, GOG, Ub
 <!-- NOUVEAUTES:DEBUT -->
 ## 🆕 Dernières nouveautés
 
+- **1.4.56** (10 novembre 2026) : Onglet en ligne : nouvelle colonne Amis avec la liste complète (en jeu, en ligne, hors ligne, demandes, groupes) et les boutons Ajouter un ami, Créer un groupe et Mon identifiant, qui ne chevauchent plus la constellation · Écran de diagnostic du chiffrement retiré
 - **1.4.55** (10 novembre 2026) : Onglet en ligne : plus aucun chevauchement de la zone d'écriture, quel que soit le thème · Les étoiles de la constellation ne passent plus sous les boutons du bas · Ton avatar reste bien centré quand il est sélectionné
 - **1.4.54** (10 novembre 2026) : Onglet en ligne : la zone d'écriture, les boutons et les messages ne se chevauchent plus quand ils sont sélectionnés
 - **1.4.53** (10 novembre 2026) : Messages chiffrés : NOVA vérifie désormais son propre appareil (signature croisée), pour qu'Element et les applis Matrix récentes lui envoient leurs clés · Nouvel écran Infos chiffrement dans les options d'une conversation
 - **1.4.52** (10 novembre 2026) : Messages chiffrés de bout en bout : NOVA lit et envoie les messages chiffrés (y compris avec Element et les autres applis Matrix) · Les nouvelles conversations et tables sont chiffrées dès le départ · Images chiffrées elles aussi
-- **1.4.51** (10 novembre 2026) : En ligne beaucoup plus rapide : la constellation et les conversations s'ouvrent instantanément · Les messages chiffrés envoyés depuis une autre appli Matrix s'affichent (avec une explication) au lieu de disparaître
 
 ➡️ [Toutes les nouveautés, version par version](CHANGELOG.md)
 <!-- NOUVEAUTES:FIN -->

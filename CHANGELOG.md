@@ -7,6 +7,10 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.61](https://github.com/head69100/nova/releases/tag/v1.4.61)
+- Statut personnalisé : Dispo pour une partie, Ne pas déranger (coupe aussi les notifications en jeu), Absent ou un texte libre, visible sur ton étoile
+- Vocal dans les conversations et les lunes : son direct de PC à PC, plusieurs personnes, qui parle s'illumine, pastille En vocal partout dans NOVA, notification quand un ami t'appelle, raccourci manette pour couper le micro
+
 ### [NOVA 1.4.60](https://github.com/head69100/nova/releases/tag/v1.4.60)
 - Ajouter un ami devient simple : tape juste son pseudo, NOVA te montre le compte trouvé avant d'envoyer la demande
 - Nouveau lien d'ami à partager (Discord, SMS…) : un clic l'ouvre dans NOVA pour t'ajouter

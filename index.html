@@ -10,6 +10,8 @@
   <meta property="og:description" content="Tous tes jeux PC, une seule interface, pensée pour la manette. Gratuit sur Windows.">
   <meta property="og:image" content="https://head69100.github.io/nova/screenshots/01-accueil-neon.jpg">
   <meta property="og:type" content="website">
+  <link rel="alternate" hreflang="en" href="https://head69100.github.io/nova/en/">
+  <link rel="alternate" hreflang="fr" href="https://head69100.github.io/nova/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237fb2ff'/%3E%3Cstop offset='.5' stop-color='%23a77bff'/%3E%3Cstop offset='1' stop-color='%2336e0ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='200' height='200' rx='46' fill='%2305070f'/%3E%3Ccircle cx='100' cy='100' r='70' fill='none' stroke='url(%23g)' stroke-width='12'/%3E%3Cpath d='M74 126V74l52 52V74' fill='none' stroke='%23fff' stroke-width='13' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,6 +104,8 @@
     .head h2 { margin: 14px 0 14px; font-size: clamp(32px, 4.6vw, 54px); line-height: 1.04; }
     .head p { margin: 0; color: var(--muted); font-size: 17px; }
 
+    .demo { max-width: 900px; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5); background: var(--bg2); }
+    .demo img { width: 100%; height: auto; }
     /* thèmes : sélecteur façon console */
     .themes { display: grid; grid-template-columns: 300px 1fr; gap: 28px; align-items: center; }
     .theme-list { display: flex; flex-direction: column; gap: 8px; }
@@ -239,6 +243,7 @@
         <a href="#installer">Installer</a>
         <a href="#nouveautes">Nouveautés</a>
         <a href="#faq">Questions</a>
+        <a href="en/" hreflang="en" lang="en" title="English version">EN</a>
       </nav>
       <a class="btn btn-main btn-sm js-dl" href="https://github.com/head69100/nova/releases/latest">Télécharger</a>
       <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="links">
@@ -278,8 +283,19 @@
       </div>
     </section>
 
-    <!-- Thèmes -->
-    <section id="themes">
+    <!-- Démo animée -->
+    <section id="demo" style="padding-bottom:0">
+      <div class="wrap">
+        <div class="head center reveal">
+          <div class="kicker">En action</div>
+          <h2>Tout se fait à la manette.</h2>
+          <p>Choisir un jeu, ouvrir sa page, parcourir la bibliothèque et les stats : quelques secondes de NOVA, sans toucher la souris.</p>
+        </div>
+        <div class="demo reveal"><img src="screenshots/nova-demo.gif" alt="Démonstration animée : navigation à la manette dans l’accueil, la page d’un jeu, la bibliothèque et les statistiques de NOVA" width="720" height="405" loading="lazy"></div>
+      </div>
+    </section>
+
+    <!-- Thèmes -->    <section id="themes">
       <div class="wrap">
         <div class="head reveal">
           <div class="kicker">Quatre ambiances</div>

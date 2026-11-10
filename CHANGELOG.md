@@ -7,6 +7,11 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 10 novembre 2026
 
+### [NOVA 1.4.55](https://github.com/head69100/nova/releases/tag/v1.4.55)
+- Onglet en ligne : plus aucun chevauchement de la zone d'écriture, quel que soit le thème
+- Les étoiles de la constellation ne passent plus sous les boutons du bas
+- Ton avatar reste bien centré quand il est sélectionné
+
 ### [NOVA 1.4.54](https://github.com/head69100/nova/releases/tag/v1.4.54)
 - Onglet en ligne : la zone d'écriture, les boutons et les messages ne se chevauchent plus quand ils sont sélectionnés
 

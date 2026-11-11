@@ -51,11 +51,11 @@ Retrouve tes amis **sans quitter ta console**, avec une interface pensée pour l
 <!-- NOUVEAUTES:DEBUT -->
 ## 🆕 Dernières nouveautés
 
+- **1.4.68** (11 novembre 2026) : Nouvel onglet Boutique : les jeux gratuits du moment (offerts Epic Games avec leur date de fin et ceux qui arrivent, free-to-play Steam, gratuits GOG et itch.io) · Installation en un clic (Steam installe directement, Epic ouvre son installateur) · Recherche d'un jeu Steam à installer
 - **1.4.67** (10 novembre 2026) : Télé séparée : l'écran télé est retrouvé plus sûrement juste après l'installation du pilote
 - **1.4.66** (10 novembre 2026) : Télé séparée (Paramètres › Télé & réseau) : quelqu'un joue sur la télé à la manette pendant que tu utilises ton PC normalement · La télé a son propre écran, le son du jeu part sur la télé et tes applis restent sur ton casque ou tes enceintes
 - **1.4.65** (10 novembre 2026) : Paramètres : l'aperçu d'une section n'affiche plus de lignes « undefined »
 - **1.4.64** (10 novembre 2026) : En ligne : quand le serveur Matrix demande de patienter (trop de demandes), NOVA attend tout seul et réessaie, sinon il dit clairement combien de temps attendre · NOVA envoie moins de demandes en arrière-plan (statut rafraîchi moins souvent, une seule fois par ami)
-- **1.4.63** (10 novembre 2026) : Appels compatibles Element : quand un ami t'appelle depuis Element, NOVA sonne (même en jeu, sauf en Ne pas déranger) et tu décroches ou refuses à la manette · Tu peux aussi appeler depuis NOVA un ami qui utilise Element · Pastille d'appel avec la durée, micro et raccrocher
 
 ➡️ [Toutes les nouveautés, version par version](CHANGELOG.md)
 <!-- NOUVEAUTES:FIN -->

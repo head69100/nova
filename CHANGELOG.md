@@ -7,6 +7,11 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 
 ## 11 novembre 2026
 
+### [NOVA 1.4.69](https://github.com/head69100/nova/releases/tag/v1.4.69)
+- Liste de souhaits dans la Boutique, avec une alerte quand un jeu passe en promo
+- Clé de récupération : relis tes anciens messages chiffrés (clé ou phrase de sécurité d'Element)
+- Sauvegarde chiffrée des clés de conversation sur ton compte
+
 ### [NOVA 1.4.68](https://github.com/head69100/nova/releases/tag/v1.4.68)
 - Nouvel onglet Boutique : les jeux gratuits du moment (offerts Epic Games avec leur date de fin et ceux qui arrivent, free-to-play Steam, gratuits GOG et itch.io)
 - Installation en un clic (Steam installe directement, Epic ouvre son installateur)
@@ -21,7 +26,7 @@ NOVA se met à jour tout seul : une petite notification t'avertit quand une nouv
 - Télé séparée (Paramètres › Télé & réseau) : quelqu'un joue sur la télé à la manette pendant que tu utilises ton PC normalement
 - La télé a son propre écran, le son du jeu part sur la télé et tes applis restent sur ton casque ou tes enceintes
 
-### [NOVA 1.4.65](https://github.com/head69100/nova/releases/tag/v1.4.65)
+### NOVA 1.4.65
 - Paramètres : l'aperçu d'une section n'affiche plus de lignes « undefined »
 
 ### NOVA 1.4.64
